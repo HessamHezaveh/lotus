@@ -5,9 +5,10 @@ import React from "react";
 const Features = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-8">
-      <h2>Features</h2>
+      <h2>{featuresData.title}</h2>
+      <p>{featuresData.description}</p>
       <div className="flex flex-col sm:flex-row gap-8">
-        {featuresData.map((item) => {
+        {featuresData.features.map((item) => {
           return (
             <div key={item.id}>
               <Image

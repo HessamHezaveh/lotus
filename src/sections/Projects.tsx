@@ -4,9 +4,10 @@ import React from "react";
 const Projects = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-8">
-      <h2>Projects</h2>
+      <h2>{projectsData.title}</h2>
+      <p>{projectsData.description}</p>
       <div className="flex flex-col sm:flex-row gap-8">
-        {projectsData.map((item) => {
+        {projectsData.projects.map((item) => {
           return (
             <div key={item.id}>
               <img src={item.image.src} alt={item.image.alt} />

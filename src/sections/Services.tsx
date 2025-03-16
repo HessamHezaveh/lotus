@@ -6,9 +6,10 @@ import React from "react";
 const Services = () => {
   return (
     <div className="flex flex-col gap-8 items-center justify-center">
-      <h2>Services</h2>
+      <h2>{servicesData.title}</h2>
+      <p>{servicesData.description}</p>
       <div className="flex flex-col sm:flex-row gap-8">
-        {servicesData.map((item) => {
+        {servicesData.services.map((item) => {
           return (
             <div key={item.id}>
               <Image

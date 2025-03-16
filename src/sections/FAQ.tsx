@@ -10,9 +10,10 @@ import React from "react";
 const FAQ = () => {
   return (
     <div className="flex flex-col gap-8 items-center justify-center">
-      <h2>FAQ's</h2>
+      <h2>{faqData.title}</h2>
+      <p>{faqData.description}</p>
       <div>
-        {faqData.map((item) => {
+        {faqData.faqs.map((item) => {
           return (
             <Accordion
               type="single"
