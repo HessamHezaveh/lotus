@@ -5,19 +5,22 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-4 bg-mh-darkBlue h-96">
-      <h1 className="">{heroData.title}</h1>
-      <p>{heroData.description}</p>
-      <Image
-        src={heroData.image.src}
-        alt={heroData.image.alt}
-        objectFit="cover"
-        width={100}
-        height={100}
-      />
-      <Button variant={"outline"} className="cursor-pointer">
-        {heroData.buttonText}
-      </Button>
+    <div className="h-screen">
+      <div className="flex flex-col items-center justify-center gap-4 bg-gradient-to-tr from-mh-darkBlue to-mh-lightBlue h-[70%]">
+        <h1 className="">{heroData.title}</h1>
+        <p>{heroData.description}</p>
+        <Image
+          src={heroData.image.src}
+          alt={heroData.image.alt}
+          objectFit="cover"
+          width={100}
+          height={100}
+        />
+        <Button variant={"outline"} className="cursor-pointer">
+          {heroData.buttonText}
+        </Button>
+      </div>
+      <div className="h-[30%] bg-amber-500 w-full">test</div>
     </div>
   );
 };

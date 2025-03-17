@@ -34,7 +34,7 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed z-50 grid grid-cols-3 items-center w-full justify-between px-16 h-16 transition-all duration-300 ease-in-out max-sm:bg-white ${
+      className={`sticky z-50 grid grid-cols-3 items-center w-full justify-between px-16 h-16 transition-all duration-300 ease-in-out max-sm:bg-white ${
         isScrolled ? "md:top-4" : "bg-white top-0"
       }`}
     >
@@ -45,7 +45,7 @@ const Header = () => {
           isScrolled
             ? "md:bg-mh-darkBlue text-white"
             : "text-mh-darkBlue bg-white"
-        } flex items-center justify-center transition-all duration-300 ease-in-out h-full rounded-xl`}
+        } flex items-center justify-center transition-all duration-300 ease-in-out h-full rounded-full`}
       >
         {/* Desktop Menu */}
         <nav className="hidden md:flex justify-center items-center gap-8">
