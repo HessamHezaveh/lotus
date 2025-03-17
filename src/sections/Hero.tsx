@@ -5,7 +5,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-4">
+    <div className="flex flex-col items-center justify-center gap-4 bg-mh-darkBlue h-96">
       <h1 className="">{heroData.title}</h1>
       <p>{heroData.description}</p>
       <Image
