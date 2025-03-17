@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import {
   Drawer,
   DrawerContent,
@@ -34,21 +33,23 @@ const Header = () => {
 
   return (
     <div
-      className={`sticky z-50 grid grid-cols-3 items-center w-full justify-between px-16 h-16 transition-all duration-300 ease-in-out max-sm:bg-white ${
-        isScrolled ? "md:top-4" : "bg-white top-0"
+      className={`sticky z-50 grid grid-cols-3 items-center w-full justify-between px-8 md:px-16 h-16 transition-all duration-300 ease-in-out top-0 max-md:bg-white ${
+        isScrolled ? "md:top-4" : "bg-white md:top-0"
       }`}
     >
       {/* LOGO */}
-      <div className="text-mh-darkBlue col-span-1 md:text-4xl">logo</div>
+      <div className="text-mh-darkBlue col-span-1 md:text-4xl justify-self-start">
+        logo
+      </div>
       <div
         className={`${
           isScrolled
             ? "md:bg-mh-darkBlue text-white"
             : "text-mh-darkBlue bg-white"
-        } flex items-center justify-center transition-all duration-300 ease-in-out h-full rounded-full`}
+        } hidden md:flex items-center justify-center transition-all duration-300 ease-in-out h-full rounded-full`}
       >
         {/* Desktop Menu */}
-        <nav className="hidden md:flex justify-center items-center gap-8">
+        <nav className="flex justify-center items-center gap-8">
           {headerTitleList.map((item) => {
             return (
               <Link
@@ -79,7 +80,7 @@ const Header = () => {
                   <Link
                     href={item.href}
                     key={item.id}
-                    className="text-mh-darkBlue hover:text-mh-gold transition-all duration-300 ease-in-out"
+                    className="text-mh-darkBlue text-2xl hover:text-mh-gold transition-all duration-300 ease-in-out"
                   >
                     {item.name}
                   </Link>

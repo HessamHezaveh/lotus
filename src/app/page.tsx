@@ -1,29 +1,35 @@
-import AboutUs from "@/sections/AboutUs";
-import ContactUs from "@/sections/ContactUs";
-import FAQ from "@/sections/FAQ";
-import Features from "@/sections/Features";
-import Footer from "@/sections/Footer";
-import Hero from "@/sections/Hero";
-import Projects from "@/sections/Projects";
-import Services from "@/sections/Services";
-import Testimonials from "@/sections/Testimonials";
+import AboutUs from "@/components/sections/AboutUs";
+import ContactUs from "@/components/sections/ContactUs";
+import FAQ from "@/components/sections/FAQ";
+import Features from "@/components/sections/Features";
+import Footer from "@/components/sections/Footer";
+import FormsSection from "@/components/sections/FormsSection";
+import Hero from "@/components/sections/Hero";
+import Projects from "@/components/sections/Projects";
+import Services from "@/components/sections/Services";
+import Testimonials from "@/components/sections/Testimonials";
 import React from "react";
 
 const Home = () => {
   return (
-    <div className=" flex flex-col gap-16">
-
+    <div className=" flex flex-col gap-8 md:gap-24">
       <div>
         <Hero />
       </div>
-      <div>
+      <div className="">
+        <Features />
+      </div>
+      <div className="">
         <Services />
       </div>
       <div>
-        <AboutUs />
+        <FormsSection />
       </div>
       <div>
-        <Features />
+        <FAQ />
+      </div>
+      <div>
+        <AboutUs />
       </div>
       <div>
         <Projects />
@@ -31,9 +37,7 @@ const Home = () => {
       <div>
         <Testimonials />
       </div>
-      <div>
-        <FAQ />
-      </div>
+
       <div>
         <ContactUs />
       </div>

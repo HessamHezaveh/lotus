@@ -18,6 +18,7 @@ export const headerTitleList = [
 
 export const heroData = {
   title: "Welcome to our website",
+  mainTitle:"Lotus company",
   description: "We provide the best services for you",
   buttonText: "Get Started",
   buttonHref: "/services",
@@ -58,6 +59,33 @@ export const servicesData = {
         alt: "Service 3 Image",
       },
     },
+    {
+      id:4,
+      title:"Service 4",
+      description:"Service 4 Description",
+      image: {
+        src: "/images/service-4.jpg",
+        alt: "Service 4 Image",
+      },
+    },
+    {
+      id:5,
+      title:"Service 5",
+      description:"Service 5 Description",
+      image: {
+        src: "/images/service-5.jpg",
+        alt: "Service 5 Image",
+      },
+    },
+    {
+      id:6,
+      title:"Service 6",
+      description:"Service 6 Description",
+      image: {
+        src: "/images/service-6.jpg",
+        alt: "Service 6 Image",
+      },
+    }
   ],
 };
 
@@ -225,3 +253,9 @@ export const footerData = {
     },
   ],
 };
+
+export const formData ={
+  title:"Get Price",
+  description:"Get Price of our Services based on your needs",
+  header:"Enter your details"
+}
