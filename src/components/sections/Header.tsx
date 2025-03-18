@@ -50,8 +50,8 @@ const Header = () => {
 
   return (
     <div
-      className={`sticky z-50 grid grid-cols-3 items-center w-full justify-between px-8 md:px-16 h-[8vh] md:h-[10vh] transition-all duration-300 ease-in-out top-0 max-md:bg-white ${
-        isScrolled ? "md:top-4" : "bg-white md:top-0"
+      className={`sticky z-50 grid grid-cols-3 items-center w-full justify-between px-8 md:px-16 h-[8vh] transition-all duration-300 ease-in-out top-0 max-md:bg-white ${
+        isScrolled ? "md:top-4  md:h-[6vh]" : "bg-white md:top-0 md:h-[10vh]"
       }`}
     >
       {/* LOGO */}

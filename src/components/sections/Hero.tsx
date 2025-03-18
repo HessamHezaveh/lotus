@@ -17,7 +17,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl text-center font-extrabold text-mh-gold">
             {heroData.mainTitle}
           </h1>
-          <p className="text-white text-center md:text-start text-xl md:text-2xl font-medium max-w-xl">
+          <p className="text-white text-center md:text-start text-xl md:text-2xl font-light max-w-xl">
             {heroData.description}
           </p>
         </div>
@@ -29,7 +29,7 @@ const Hero = () => {
           >
             {heroData.buttonText}
           </Button>
-          <span className="flex items-center text-white justify-between gap-2 p-2 md:p-4  hover:translate-x-2 transition-all duration-300 ease-in-out cursor-pointer text-sm md:text-lg ">
+          <span className="flex items-center text-white justify-between gap-2 p-2 md:p-4  hover:translate-x-2 transition-all duration-300 ease-in-out cursor-pointer text-sm md:text-lg font-light">
             <p className="">Bizi takip edin</p>
             <MoveRightIcon className=" flex self-end" />
           </span>
