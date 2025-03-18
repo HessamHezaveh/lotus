@@ -19,7 +19,7 @@ const Services = () => {
           return (
             <Card
               key={item.id}
-              className={`border-none md:py-12 text-white bg-mh-mainBlue shadow-mh-lightBlue cursor-pointer hover:shadow-md transition-all duration-300 ease-in-out 
+              className={`border-none md:py-12 text-white bg-mh-mainBlue hover:shadow-mh-lightBlue/50 shadow-xl transition-all duration-300 ease-in-out 
                 ${
                   (item.id - 1) % 4 < 2
                     ? "rounded-bl-none rounded-tr-none rounded-br-[45px] rounded-tl-[45px] "

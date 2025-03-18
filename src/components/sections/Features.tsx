@@ -10,7 +10,7 @@ const Features = () => {
           return (
             <Card
               key={item.id}
-              className=" bg-zinc-200 border-none  rounded-bl-none rounded-tr-none rounded-br-[45px] rounded-tl-[45px] shadow-xl  hover:shadow-mh-lightBlue/50 transition-all duration-300 ease-in-out w-full px-16"
+              className=" bg-zinc-200 border-none rounded-bl-none rounded-tr-none rounded-br-[45px] rounded-tl-[45px] shadow-xl  hover:shadow-mh-lightBlue/50 transition-all duration-300 ease-in-out w-full px-16"
             >
               <CardHeader>
                 <CardTitle className="flex flex-col items-center">
