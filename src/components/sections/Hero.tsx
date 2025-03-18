@@ -1,38 +1,38 @@
 import { Button } from "@/components/ui/button";
 import { heroData } from "@/utils/data";
+import {
+  ArrowBigRightIcon,
+  ChevronRightIcon,
+  MoveRightIcon,
+} from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col gap-4 bg-gradient-to-tr md:items-start items-center justify-center from-mh-darkBlue to-mh-lightBlue h-[70vh] md:h-[90vh]">
-      <div className=" container mx-auto px-4 md:px-0">
-        <div className="flex flex-col items-center md:items-start justify-center">
-          <p className="text-white text-xs md:text-xl font-light">
-            {heroData.title}
-          </p>
-          <h1 className="text-3xl md:text-7xl font-extrabold text-mh-gold">
+    <div className="flex flex-col gap-4 bg-gradient-to-tr md:items-start items-center justify-center from-mh-mainBlue to-mh-lightBlue h-screen  md:h-[700px]">
+      <div className=" container mx-auto px-4 md:px-0 flex flex-col gap-8">
+        <div className="flex flex-col items-center md:items-start justify-center gap-4">
+          <p className="text-white text-xl font-extrabold">{heroData.title}</p>
+          <h1 className="text-5xl md:text-7xl text-center font-extrabold text-mh-gold">
             {heroData.mainTitle}
           </h1>
-          <p className="text-white text-xl md:text-2xl font-thin">
+          <p className="text-white text-center md:text-start text-xl md:text-2xl font-medium max-w-xl">
             {heroData.description}
           </p>
         </div>
-        <Image
-          src={heroData.image.src}
-          alt={heroData.image.alt}
-          objectFit="cover"
-          width={100}
-          height={100}
-        />
-        <div className="flex items-center justify-center md:justify-start">
+        <div className="flex flex-col md:flex-row items-center justify-center md:justify-start">
           <Button
             variant={"outline"}
             size="lg"
-            className="cursor-pointer md:p-8 md:px-14 text-mh-darkBlue hover:text-mh-darkBlue"
+            className="cursor-pointer md:p-6 md:px-10 text-mh-mainBlue hover:bg-transparent border-2 border-mh-gold hover:text-mh-gold text-xl font-bold"
           >
             {heroData.buttonText}
           </Button>
+          <span className="flex items-center text-white justify-between gap-2 p-2 md:p-4  hover:translate-x-2 transition-all duration-300 ease-in-out cursor-pointer text-sm md:text-lg ">
+            <p className="">Bizi takip edin</p>
+            <MoveRightIcon className=" flex self-end" />
+          </span>
         </div>
       </div>
     </div>

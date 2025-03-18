@@ -12,11 +12,11 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className=" flex flex-col gap-8 md:gap-24">
-      <div>
+    <div className=" flex flex-col gap-8 md:gap-20">
+      <div className="">
         <Hero />
       </div>
-      <div className="">
+      <div className="md:-mb-32">
         <Features />
       </div>
       <div className="">
@@ -26,20 +26,10 @@ const Home = () => {
         <FormsSection />
       </div>
       <div>
-        <FAQ />
-      </div>
-      <div>
         <AboutUs />
       </div>
       <div>
-        <Projects />
-      </div>
-      <div>
-        <Testimonials />
-      </div>
-
-      <div>
-        <ContactUs />
+        <FAQ />
       </div>
       <div>
         <Footer />

@@ -44,3 +44,18 @@
   --color-mh-gold: #d8b46e;
   --color-mh-white: #ffffff;
 }
+
+.container {
+  @media (width >= 48rem /* 768px */) {
+    width: 100%;
+    @media (width >= 40rem /* 640px */) {
+      max-width: 40rem /* 640px */;
+    }
+    @media (width >= 48rem /* 768px */) {
+      max-width: 48rem /* 768px */;
+    }
+    @media (width >= 64rem /* 1024px */) {
+      max-width: 64rem /* 1024px */;
+    }
+  }
+}

@@ -5,21 +5,26 @@ export const headerTitleList = [
     href: "/",
   },
   {
-    id: 2,
-    name: "About-Us",
-    href: "/about-us",
+    id:2,
+    name:"Price",
+    href:"#price-form"
   },
   {
     id: 3,
+    name: "About-Us",
+    href: "#about-us",
+  },
+  {
+    id: 4,
     name: "Contact-Us",
-    href: "/contact-us",
+    href: "#contact-us",
   },
 ];
 
 export const heroData = {
   title: "Welcome to our website",
   mainTitle:"Lotus company",
-  description: "We provide the best services for you",
+  description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, impedit ducimus laboriosam neque molestiae atque.",
   buttonText: "Get Started",
   buttonHref: "/services",
   image: {
@@ -233,8 +238,11 @@ export const contactUsData = {
 };
 
 export const footerData = {
-  title: "Footer",
+  title: "Contact us",
   description: "Footer Description",
+  address: "123 Main St, City, State, Zip",
+  phone: "123-456-7890",
+  email: "info@example.com",
   socialLinks: [
     {
       id: 1,
