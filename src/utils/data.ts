@@ -1,31 +1,33 @@
+
+
 export const headerTitleList = [
   {
     id: 1,
-    name: "Home",
+    name: "Ana Sayfa",
     href: "/",
   },
   {
-    id:2,
-    name:"Price",
-    href:"#price-form"
+    id: 2,
+    name: "Fiyat",
+    href: "#price-form",
   },
   {
     id: 3,
-    name: "About-Us",
+    name: "Hakkımızda",
     href: "#about-us",
   },
   {
     id: 4,
-    name: "Contact-Us",
+    name: "İletişim",
     href: "#contact-us",
   },
 ];
 
 export const heroData = {
-  title: "Welcome to our website",
+  title: "Web Sitemize Hoş Geldiniz",
   mainTitle:"Lotus company",
   description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, impedit ducimus laboriosam neque molestiae atque.",
-  buttonText: "Get Started",
+  buttonText: "Başlayın",
   buttonHref: "/services",
   image: {
     src: "/images/hero-image.jpg",
@@ -34,75 +36,59 @@ export const heroData = {
 };
 
 export const servicesData = {
-  title: "Services",
-  description: "We provide the best services for you",
+  title: "Hizmetler",
+  description: "Size en iyi hizmetleri sunuyoruz",
   services: [
     {
       id: 1,
-      title: "Service 1",
-      description: "Service 1 Description",
-      image: {
-        src: "/images/service-1.jpg",
-        alt: "Service 1 Image",
-      },
+      title: "Bahçe Bakımı",
+      description: "Peyzaj düzenlemesi ve düzenli çim bakımı ile yeşil alanlarınızı koruyoruz",
+      icon: "SproutIcon",
     },
     {
       id: 2,
-      title: "Service 2",
-      description: "Service 2 Description",
-      image: {
-        src: "/images/service-2.jpg",
-        alt: "Service 2 Image",
-      },
+      title: "Bina Temizliği",
+      description: "Ortak alanlarınızı hijyenik ve tertemiz tutuyoruz",
+      icon: "TrashIcon",
     },
     {
       id: 3,
-      title: "Service 3",
-      description: "Service 3 Description",
-      image: {
-        src: "/images/service-3.jpg",
-        alt: "Service 3 Image",
-      },
+      title: "Tesis Yöneticiliği",
+      description: "Tesisinizin tüm operasyonlarını profesyonelce yönetiyoruz",
+      icon: "WrenchIcon", 
     },
     {
-      id:4,
-      title:"Service 4",
-      description:"Service 4 Description",
-      image: {
-        src: "/images/service-4.jpg",
-        alt: "Service 4 Image",
-      },
+      id: 4,
+      title: "Teknik Servis",
+      description: "Elektrik, su ve diğer teknik sorunlarınıza hızlı çözüm sağlıyoruz",
+      icon: "SettingsIcon", 
     },
     {
-      id:5,
-      title:"Service 5",
-      description:"Service 5 Description",
-      image: {
-        src: "/images/service-5.jpg",
-        alt: "Service 5 Image",
-      },
+      id: 5,
+      title: "İlaçlama",
+      description: "Zararlılara karşı etkili ve güvenli çözümler sunuyoruz",
+      icon: "BugOffIcon", 
     },
     {
-      id:6,
-      title:"Service 6",
-      description:"Service 6 Description",
-      image: {
-        src: "/images/service-6.jpg",
-        alt: "Service 6 Image",
-      },
-    }
+      id: 6,
+      title: "Havuz Bakımı",
+      description: "Havuzlarınızı sağlıklı ve temiz tutmak için düzenli bakım yapıyoruz",
+      icon: "WavesIcon",
+    },
   ],
 };
 
 export const aboutUsData = {
-  title: "About Us",
+  title: "Hakkımızda",
   description:
-    "We are a team of professionals who provide the best services for you",
+    "Size en iyi hizmetleri sunan profesyonel bir ekibiz",
+  text: "10 yılı aşkın sektör deneyimimizle site ve tesis yönetimi alanındaki uzmanlığımızı, Lotus Yönetim ve Danışmanlık çatısı altında birleştirdik. Şeffaf, yenilikçi ve müşteri memnuniyeti odaklı hizmet anlayışımızla, bugün 1500’den fazla kat malikine hizmet vermekteyiz.",
   image: {
     src: "/images/about-us.jpg",
-    alt: "About Us Image",
+    alt: "Hakkımızda Görseli",
   },
 };
+
 
 export const featuresData = {
   title: "Features",
@@ -110,30 +96,23 @@ export const featuresData = {
   features: [
     {
       id: 1,
-      title: "Feature 1",
-      description: "Feature 1 Description",
-      image: {
-        src: "/images/feature-1.jpg",
-        alt: "Feature 1 Image",
-      },
+      title: "Şeffaf Yönetim",
+      description: "Tüm süreçlerde açık ve net iletişim sağlıyoruz",
+      icon:"SearchCheckIcon"
     },
     {
       id: 2,
-      title: "Feature 2",
-      description: "Feature 2 Description",
-      image: {
-        src: "/images/feature-2.jpg",
-        alt: "Feature 2 Image",
-      },
+      title: "Samimi Hizmet",
+      description: "Size gerçekten değer veren, güvenilir bir ekip",
+      icon:"HandshakeIcon"
+
     },
     {
       id: 3,
-      title: "Feature 3",
-      description: "Feature 3 Description",
-      image: {
-        src: "/images/feature-3.jpg",
-        alt: "Feature 3 Image",
-      },
+      title: "Hızlı Çözüm",
+      description: "Sorunlarınıza anında ve etkili müdahale",
+      icon:"zapIcon"
+
     },
   ],
 };
@@ -238,28 +217,45 @@ export const contactUsData = {
 };
 
 export const footerData = {
-  title: "Contact us",
-  description: "Footer Description",
-  address: "123 Main St, City, State, Zip",
+  title: "Lotus company",
+  description: "Lorem ipsum dolor sit amet.",
+  
+  image:{
+    src:"/logo 3.png",
+    alt:"logo"
+  },
+  contact:{
+    title:"Contact us",
+    address: "123 Main St, City, State, Zip",
   phone: "123-456-7890",
   email: "info@example.com",
-  socialLinks: [
-    {
-      id: 1,
-      name: "Facebook",
-      href: "https://www.facebook.com",
-    },
-    {
-      id: 2,
-      name: "Twitter",
-      href: "https://www.twitter.com",
-    },
-    {
-      id: 3,
-      name: "Instagram",
-      href: "https://www.instagram.com",
-    },
-  ],
+  },
+  socials: {
+    title:"Social media",
+    socialLinks:[
+      {
+        id: 1,
+        name: "Facebook",
+        icon: "FacebookIcon",
+        href: "https://www.facebook.com",
+      },
+      {
+        id: 2,
+        name: "Twitter",
+        icon: "TwitterIcon",
+        href: "https://www.twitter.com",
+      },
+      {
+        id: 3,
+        name: "Instagram",
+        icon: "InstagramIcon",
+        href: "https://www.instagram.com",
+      },
+    ],
+  },
+  copyright:{
+    text: "Lotus company"
+  }
 };
 
 export const formData ={

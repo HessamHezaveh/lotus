@@ -29,9 +29,9 @@ const Home = () => {
       <div>
         <AboutUs />
       </div>
-      <div>
+      {/* <div>
         <Map lat={ 40.762572398982364} lng={ 30.367863815035918}/>
-      </div>
+      </div> */}
       <div>
         <FAQ />
       </div>

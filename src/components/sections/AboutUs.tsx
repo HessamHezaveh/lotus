@@ -13,13 +13,8 @@ const AboutUs = () => {
           {aboutUsData.description}
         </p>
       </div>
-      <div className="px-4 md:px-0 text-mh-darkBlue text-start text-sm md:text-lg font-thin md:font-light">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem tempora eos
-        officiis ipsum excepturi rerum ab, quam, perspiciatis animi, quae natus!
-        Ex delectus assumenda saepe atque omnis modi corporis aut? Alias nemo
-        natus commodi excepturi explicabo tempore adipisci cumque doloribus,
-        pariatur saepe. Ut, sit. Iste mollitia sint ad at quas necessitatibus
-        quibusdam nihil odit qui tempore. Saepe cum dolorem molestiae?
+      <div className="px-4 md:px-0 md:w-2/3 mx-auto text-mh-darkBlue text-start text-sm md:text-lg font-thin md:font-light">
+        {aboutUsData.text}
       </div>
     </div>
   );
