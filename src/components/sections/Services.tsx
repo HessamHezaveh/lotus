@@ -30,7 +30,7 @@ const Services = () => {
           return (
             <Card
               key={item.id}
-              className={`border-none md:py-12  px-6 text-white bg-gradient-to-bl from-mh-lightBlue to-mh-mainBlue  shadow hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out 
+              className={`border-none md:py-12  py-10 px-6 text-white bg-gradient-to-bl from-mh-lightBlue to-mh-mainBlue  shadow hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out gap-4 sm:gap-6
                 ${
                   (item.id - 1) % 4 < 2
                     ? "rounded-bl-none rounded-tr-none rounded-br-[45px] rounded-tl-[45px]"
@@ -38,14 +38,14 @@ const Services = () => {
                 } 
               `}
             >
-              <CardHeader className="flex justify-start lg:justify-center lg:flex-col gap-4 items-center">
-                <IconComponent className="w-12 h-12 text-mh-gold" />
+              <CardHeader className="flex justify-center sm:justify-start lg:justify-center lg:flex-col gap-4 items-center">
+                <IconComponent className="sm:w-12 sm:h-12 h-8 w-8 text-mh-gold" />
                 <CardTitle>
-                  <h3 className="text-2xl ">{item.title}</h3>
+                  <h3 className="text-xl sm:text-2xl ">{item.title}</h3>
                 </CardTitle>
               </CardHeader>
               <CardContent className="">
-                <p className="font-light text-xl text-start lg:text-center">
+                <p className="font-light text-sm sm:text-xl text-center sm:text-start lg:text-center">
                   {item.description}
                 </p>
               </CardContent>
