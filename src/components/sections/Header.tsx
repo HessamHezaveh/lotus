@@ -50,7 +50,7 @@ const Header = () => {
 
   return (
     <div
-      className={`sticky z-50 flex items-center w-full justify-center px-8 md:px-16 h-fit  transition-all duration-300 ease-in-out top-0 max-md:bg-white ${
+      className={`sticky z-50 flex items-center w-full justify-center px-8 px-16 h-fit  transition-all duration-300 ease-in-out top-0 max-md:bg-white ${
         isScrolled ? "md:top-4  md:h-fit" : "bg-white md:top-0 md:h-[10vh]"
       }`}
     >

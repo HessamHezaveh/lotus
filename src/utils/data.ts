@@ -37,7 +37,7 @@ export const heroData = {
 
 export const servicesData = {
   title: "Hizmetler",
-  description: "Size en iyi hizmetleri sunuyoruz",
+  description: "Projenin kurulumundan yasal başvurulara, bütçe yönetiminden genel kurul süreçlerine kadar tüm detayları hızlı ve şeffaf bir şekilde yönetiyoruz. Apsiyon iş birliği sayesinde tüm süreçleri ve finansal hareketleri kolaylıkla takip edebilme imkânı sunuyoruz. Amacımız, kat sakinlerimize mutlu ve güvenli bir yaşam alanı sağlamaktır.",
   services: [
     {
       id: 1,

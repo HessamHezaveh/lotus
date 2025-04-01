@@ -21,7 +21,7 @@ const Footer = () => {
       id="contact-us"
       className="w-full h-full md:h-[300px] bg-gradient-to-tr from-mh-mainBlue to-mh-lightBlue flex flex-col gap-4 pb-4"
     >
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 place-items-center gap-8 ">
+      <div className="container py-7 mx-auto grid grid-cols-1 md:grid-cols-3 place-items-center gap-8 ">
         <div className="flex flex-col items-center justify-center">
           <img
             className="invert w-24"
@@ -31,12 +31,12 @@ const Footer = () => {
           <h2 className="text-center text-mh-gold text-xl md:text-3xl font-bold md:font-black">
             {footerData.title}
           </h2>
-          <p className="text-white font-light text-xs">
+          <p className="text-white font-light py-6 text-xs">
             {footerData.description}
           </p>
         </div>
 
-        <div className="text-white flex flex-col items-center justify-center py-4 gap-4">
+        <div className="text-white flex flex-col  justify-center py-4 gap-4">
           <h3 className="text-mh-gold text-xl md:text-3xl  font-bold md:font-black">
             {footerData.contact.title}
           </h3>
@@ -86,7 +86,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center text-white py-8">
+      <div className="flex bg-mh-darkBlue justify-center items-center text-white py-8">
         <p className="text-sm">
           © {new Date().getFullYear()}{" "}
           <a
