@@ -1,14 +1,10 @@
 import AboutUs from "@/components/sections/AboutUs";
-import ContactUs from "@/components/sections/ContactUs";
 import FAQ from "@/components/sections/FAQ";
 import Features from "@/components/sections/Features";
 import Footer from "@/components/sections/Footer";
 import FormsSection from "@/components/sections/FormsSection";
 import Hero from "@/components/sections/Hero";
-import Map from "@/components/sections/Map";
-import Projects from "@/components/sections/Projects";
 import Services from "@/components/sections/Services";
-import Testimonials from "@/components/sections/Testimonials";
 import React from "react";
 
 const Home = () => {
@@ -29,9 +25,7 @@ const Home = () => {
       <div>
         <AboutUs />
       </div>
-      {/* <div>
-        <Map lat={ 40.762572398982364} lng={ 30.367863815035918}/>
-      </div> */}
+
       <div>
         <FAQ />
       </div>

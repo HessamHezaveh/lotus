@@ -1,5 +1,4 @@
 import { aboutUsData } from "@/utils/data";
-import Image from "next/image";
 import React from "react";
 
 const AboutUs = () => {

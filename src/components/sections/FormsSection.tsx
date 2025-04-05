@@ -1,5 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import QuestionForm from "@/components/forms/QuestionForm";
 import { formData } from "@/utils/data";
 import { MultiStepForm1 } from "../forms/MultiStepForm";
 
@@ -18,10 +16,10 @@ const FormsSection = () => {
             {formData.description}
           </p>
         </div>
-        <div className='container mx-auto'>
-        <div className=' flex items-center justify-center '>
-          <MultiStepForm1 />
-        </div>
+        <div className="container mx-auto">
+          <div className=" flex items-center justify-center ">
+            <MultiStepForm1 />
+          </div>
         </div>
       </div>
     </div>

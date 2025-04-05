@@ -191,19 +191,24 @@ export const faqData = {
   faqs: [
     {
       id: 1,
-      question: "Question 1",
-      answer: "Answer 1",
+      question: "Ödediğimiz Aidatın Nereye, Nasıl Harcandığını Nasıl Bileceğiz?",
+      answer: "Lotus Yönetim olarak şeffaf yönetim ilkesini benimsemekteyiz. Sahip olduğumuz internet tabanlı sistem Apsiyon uygulaması ile size sağladığımız “ kullanıcı adı/şifre” sayesinde harcamaları görebilirsiniz.",
     },
     {
       id: 2,
-      question: "Question 2",
-      answer: "Answer 2",
+      question: "Yönetim Şirketiyle Çalışmak Maliyetli Olmaz mı?",
+      answer: "Lotus Yönetim ile çalışmak maliyetli olmaz. Kaliteli hizmeti uygun fiyata sunmasının yanı sıra, öngörüleri, bütçe disiplini, uygun tedarikçi firma seçimi, zamanlaması ve etkin personel yönetimi ile size çok daha fazlasını kazandıracaktır.",
     },
     {
       id: 3,
-      question: "Question 3",
-      answer: "Answer 3",
+      question: "Site Aidatlarını Sizin Hesabınıza mı Yatırıyoruz?",
+      answer: "Hayır, Site aidatlarını Site Yönetiminin resmi banka hesaplarına yatırmalısınız. Şirketimiz banka hesaplarına aidat yatırılmamaktadır.",
     },
+    {
+      id:4,
+      question:"Bizim 10 daireli Apartmanımız var,Site Yönetimi Kurmamıza Gerek Var mı?",
+      answer:"Evet, Bağımsız bölüm sayısı 8 ya da daha fazla olan kat mülkiyetine tabi binalar için bir yönetici tayin etmek kanunen zorunludur (KMK 34 / I ). Ancak ana taşınmazın bütün bağımsız bölümleri tek bir kişinin mülkiyetindeyse, malik kanunen yönetici durumundadır."
+    }
   ],
 };
 
@@ -226,8 +231,8 @@ export const footerData = {
   },
   contact:{
     title:"Contact us",
-    address: "123 Main St, City, State, Zip",
-  phone: "123-456-7890",
+    address: "İstasyon mahallesi hürriyet caddesi no:1/1 Kartepe Kocaeli",
+  phone: "+905314937577",
   email: "info@example.com",
   },
   socials: {

@@ -1,11 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { heroData } from "@/utils/data";
-import {
-  ArrowBigRightIcon,
-  ChevronRightIcon,
-  MoveRightIcon,
-} from "lucide-react";
-import Image from "next/image";
+import { MoveRightIcon } from "lucide-react";
 import React from "react";
 
 const Hero = () => {

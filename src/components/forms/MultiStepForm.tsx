@@ -17,12 +17,15 @@ import { toast } from "sonner";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
+import emailjs from "emailjs-com";
 import { Checkbox } from "@/components/ui/checkbox"; // Import the Checkbox component
 
 // Form Schema
 const FormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  phone: z.string().min(10, { message: "Phone number must be at least 10 characters." }),
+  phone: z
+    .string()
+    .min(10, { message: "Phone number must be at least 10 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
   message: z.string(),
   residenceName: z.string().min(2, "Residence name is required."),
@@ -59,20 +62,35 @@ export function MultiStepForm1() {
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     setLoading(true);
     try {
-      const response = await fetch("/api/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await emailjs.send(
+        "service_tv9gn7l",
+        "template_mt4j9jx",
+        {
+          name: data.name,
+          phone: data.phone,
+          email: data.email,
+          message: data.message,
+          residenceName: data.residenceName,
+          numberOfBuilding: data.numberOfBuilding,
+          numberOfApartments: data.numberOfApartments,
+          pool: data.pool ? "Yes" : "No",
+          landscapeMaintenance: data.landscapeMaintenance ? "Yes" : "No",
+          personnel: data.personnel,
+          address: data.address,
         },
-        body: JSON.stringify(data),
-      });
-      if (!response.ok) {
-        toast.error("Something went wrong!");
-      } else {
+        "010DgmtOU0U783PiF"
+      );
+
+      if (response.status === 200) {
         toast.success("Your message has been sent!");
+      } else {
+        toast.error("Failed to send message.");
       }
     } catch (error: any) {
-      toast.error("Something went wrong: " + error.message);
+      toast.error(
+        "Something went wrong: " +
+          (error?.text || error?.message || "Unknown error")
+      );
     } finally {
       setLoading(false);
     }
@@ -99,7 +117,13 @@ export function MultiStepForm1() {
       case 1:
         return ["name", "phone", "email"];
       case 2:
-        return ["residenceName", "numberOfBuilding", "numberOfApartments", "pool", "landscapeMaintenance"];
+        return [
+          "residenceName",
+          "numberOfBuilding",
+          "numberOfApartments",
+          "pool",
+          "landscapeMaintenance",
+        ];
       case 3:
         return ["address", "message"];
       default:
@@ -109,7 +133,10 @@ export function MultiStepForm1() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 text-mh-white md:w-[50%] space-y-6">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="w-2/3 text-mh-white md:w-[50%] space-y-6"
+      >
         {/* Step 1: General Info */}
         {step === 1 && (
           <>
@@ -200,42 +227,45 @@ export function MultiStepForm1() {
               />
             </div>
             <FormField
-                control={form.control}
-                name="pool"
-                render={({ field }) => (
-                    <FormItem className="flex flex-row items-center space-x-3 space-y-0">
-                    <FormControl>
-                        <Checkbox
-                        checked={field.value} // Bind the checkbox state to the form value
-                        onCheckedChange={(checked) => field.onChange(!!checked)} // Update the form state
-                        />
-                    </FormControl>
-                    <div className="space-y-1 leading-none">
-                        <FormLabel>Pool</FormLabel>
-                        <FormDescription className="text-zinc-200">Check if the residence has a pool.</FormDescription>
-                    </div>
-                    </FormItem>
-                )}
-                />
-                <FormField
-                control={form.control}
-                name="landscapeMaintenance"
-                render={({ field }) => (
-                    <FormItem className="flex flex-row items-center space-x-3 space-y-0">
-                    <FormControl>
-                        <Checkbox 
-                        checked={field.value} // Bind the checkbox state to the form value
-                        onCheckedChange={(checked) => field.onChange(!!checked)} // Update the form state
-
-                        />
-                    </FormControl>
-                    <div className="space-y-1 leading-none">
-                        <FormLabel>Landscape Maintenance</FormLabel>
-                        <FormDescription className="text-zinc-200">Check if the residence requires landscape maintenance.</FormDescription>
-                    </div>
-                    </FormItem>
-                )}
-                />
+              control={form.control}
+              name="pool"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value} // Bind the checkbox state to the form value
+                      onCheckedChange={(checked) => field.onChange(!!checked)} // Update the form state
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel>Pool</FormLabel>
+                    <FormDescription className="text-zinc-200">
+                      Check if the residence has a pool.
+                    </FormDescription>
+                  </div>
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="landscapeMaintenance"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value} // Bind the checkbox state to the form value
+                      onCheckedChange={(checked) => field.onChange(!!checked)} // Update the form state
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel>Landscape Maintenance</FormLabel>
+                    <FormDescription className="text-zinc-200">
+                      Check if the residence requires landscape maintenance.
+                    </FormDescription>
+                  </div>
+                </FormItem>
+              )}
+            />
           </>
         )}
 
@@ -262,7 +292,10 @@ export function MultiStepForm1() {
                 <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="Type your message here." {...field} />
+                    <Textarea
+                      placeholder="Type your message here."
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -274,16 +307,20 @@ export function MultiStepForm1() {
         {/* Navigation Buttons */}
         <div className="flex justify-between">
           {step > 1 && (
-            <Button variant="outline"  onClick={handleBack}>
+            <Button variant="outline" onClick={handleBack}>
               Back
             </Button>
           )}
           {step < 3 ? (
-            <Button type="button" variant="outline"  onClick={handleNext}>
+            <Button type="button" variant="outline" onClick={handleNext}>
               Next
             </Button>
           ) : (
-            <Button type="submit" className="border text-mh-mainBlue border-mh-gold bg-mh-gold hover:bg-transparent  hover:text-mh-gold" disabled={loading}>
+            <Button
+              type="submit"
+              className="border text-mh-mainBlue border-mh-gold bg-mh-gold hover:bg-transparent  hover:text-mh-gold"
+              disabled={loading}
+            >
               {loading ? (
                 <>
                   <Loader2 className="animate-spin" /> Please wait
