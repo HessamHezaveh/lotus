@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
 import { Loader } from "@googlemaps/js-api-loader";
+import { mapData } from "@/utils/data";
 
-const Map = ({ lat, lng }: { lat: number; lng: number }) => {
+const Map = () => {
   const mapRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
@@ -17,12 +18,12 @@ const Map = ({ lat, lng }: { lat: number; lng: number }) => {
         "marker"
       )) as google.maps.MarkerLibrary;
 
-      const position = { lat, lng };
-
+      // Extract the first position to center the map
+      const defaultCenter = mapData[0];
       const mapOptions: google.maps.MapOptions = {
-        center: position,
-        zoom: 13,
-        mapId: "c8e9c3eebdd61a3a",
+        center: defaultCenter,
+        zoom: 8, // Adjusted zoom level to fit multiple markers
+        mapId: "dbbf6615a1df8de8",
         disableDefaultUI: true,
         styles: [
           { featureType: "poi", stylers: [{ visibility: "off" }] },
@@ -43,29 +44,39 @@ const Map = ({ lat, lng }: { lat: number; lng: number }) => {
 
       const map = new Map(mapRef.current as HTMLDivElement, mapOptions);
 
-      // Create a custom icon
-      const icon = document.createElement("div");
-      icon.style.backgroundImage = "url(/my-logo.png)"; // Path to your logo
-      icon.style.backgroundSize = "cover";
-      icon.style.width = "50px"; // Set the width of the icon
-      icon.style.height = "50px"; // Set the height of the icon
+      // Loop through mapData and add markers for each position
+      mapData.forEach((data) => {
+        const { lat, lng } = data;
+        const position = { lat, lng };
 
-      // Create an AdvancedMarkerElement
-      new AdvancedMarkerElement({
-        map,
-        position,
-        content: icon,
+        // Create a custom icon for each marker
+        const icon = document.createElement("div");
+        icon.style.backgroundImage = "url(/my-logo.png)"; // Path to your logo
+        icon.style.backgroundSize = "cover";
+        icon.style.width = "70px"; // Set the width of the icon
+        icon.style.height = "70px"; // Set the height of the icon
+
+        // Create an AdvancedMarkerElement for each position
+        new AdvancedMarkerElement({
+          map,
+          position,
+          content: icon,
+        });
       });
     };
 
     initMap();
-  }, [lat, lng]);
+  }, []);
 
   return (
-    <div className="flex flex-col items-center justify-start w-full ">
-      <div className="w-[70%] h-fit perspective-[300px] hover:perspective-[2000px] transition-all duration-1000   ">
-        <div className=" h-90 rotate-x-10">
-          <div className="w-full h-full rounded-2xl shadow-lg " ref={mapRef} />
+    <div className="flex flex-col items-center justify-start w-full">
+      <div className="w-full sm:w-[70%]  h-[400px] sm:perspective-[300px] hover:perspective-[2000px] transition-all duration-1000">
+        <div className="h-90 rotate-x-10">
+          <div
+            className="w-full h-full rounded-2xl shadow-lg"
+            ref={mapRef}
+            style={{ height: "400px" }} // Ensure the map container has a fixed height
+          />
         </div>
       </div>
     </div>

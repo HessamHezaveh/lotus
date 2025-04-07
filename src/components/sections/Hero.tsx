@@ -19,15 +19,15 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-start">
           <a href="#price-form">
             <Button
-              variant={"outline"}
+              
               size="lg"
-              className="cursor-pointer md:p-6 md:px-10 text-mh-mainBlue hover:bg-transparent border-2 border-mh-gold hover:text-mh-gold text-xl font-bold"
+              className="cursor-pointer md:p-6 md:px-10 bg-transparent border-mh-gold border-2 text-mh-gold hover:bg-mh-gold hover:text-mh-mainBlue text-xl font-bold"
             >
               {heroData.buttonText}
             </Button>
           </a>
-          <span className="flex items-center text-white justify-between gap-2 p-2 md:p-4  hover:translate-x-2 transition-all duration-300 ease-in-out cursor-pointer text-sm md:text-lg font-light">
-            <p className="">Bizimle</p>
+          <span className="flex items-center text-mh-gold justify-between gap-2 p-2 md:p-4  hover:translate-x-2 transition-all duration-300 ease-in-out cursor-pointer text-sm md:text-lg font-light">
+            <p className="font-semibold">Bizi Takip edin</p>
             <MoveRightIcon className=" flex self-end" />
           </span>
         </div>

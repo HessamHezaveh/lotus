@@ -19,8 +19,9 @@ const Footer = () => {
   return (
     <div
       id="contact-us"
-      className="w-full h-full md:h-[300px] bg-gradient-to-tr from-mh-mainBlue to-mh-lightBlue flex flex-col gap-4 pb-4"
+      className="w-full h-full  md:h-[300px] bg-gradient-to-tr from-mh-mainBlue to-mh-lightBlue flex flex-col gap-4 pb-4"
     >
+
       <div className="container py-7 mx-auto grid grid-cols-1 md:grid-cols-3 place-items-center gap-8 ">
         <div className="flex flex-col items-center justify-center">
           <img
@@ -86,7 +87,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex bg-mh-darkBlue justify-center items-center text-white py-8">
+      <div className="flex bg-mh-mainBlue justify-center items-center text-white py-3">
         <p className="text-sm">
           © {new Date().getFullYear()}{" "}
           <a

@@ -1,5 +1,6 @@
 
 
+
 export const headerTitleList = [
   {
     id: 1,
@@ -87,7 +88,23 @@ export const aboutUsData = {
     src: "/images/about-us.jpg",
     alt: "Hakkımızda Görseli",
   },
+  
 };
+export const mapData = [
+  {
+    lat: 40.362572398982364, 
+    lng: 30.667863815035918,
+  },
+  {
+    lat: 40.762572398982364, 
+    lng: 30.367863815035918,
+  },
+  {
+    lat: 40.762572398982364, 
+    lng: 30.967863815035918,
+  },
+
+]
 
 
 export const featuresData = {
@@ -186,7 +203,7 @@ export const testimonialsData = {
 };
 
 export const faqData = {
-  title: "FAQ",
+  title: "Sıkça Sorulan Sorular",
   description: "We provide the best FAQ for you",
   faqs: [
     {

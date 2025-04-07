@@ -23,7 +23,7 @@ const Features = () => {
               className="bg-zinc-200 border-none rounded-bl-none rounded-tr-none rounded-br-[45px] rounded-tl-[45px] shadow hover:shadow-xl transition-all duration-300 ease-in-out w-full py-7 text-mh-darkBlue group flex flex-col justify-center items-center gap-3"
             >
               <CardHeader className="flex flex-col  items-center">
-                <IconComponent className="w-8 h-8 text-zinc-500 group-hover:text-mh-gold duration-300 ease-in-out transition-all" />
+                <IconComponent className="w-8 h-8 text-zinc-500 group-hover:text-mh-gold duration-300 ease-in-out transition-all mb-2"  />
                 {/* Render icon */}
                 <CardTitle className="text-center text-nowrap">
                   <h3 className="text-xl text-zinc-600 font-bold ">{item.title}</h3>

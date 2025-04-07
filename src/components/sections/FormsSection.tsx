@@ -3,12 +3,13 @@ import { MultiStepForm1 } from "../forms/MultiStepForm";
 
 const FormsSection = () => {
   return (
-    <div className="bg-gradient-to-t from-mh-lightBlue to-mh-darkBlue">
+    <div className="relative bg-gradient-to-t from-mh-lightBlue to-mh-darkBlue">
+
       <div
         id="price-form"
-        className="w-full md:container mx-auto flex flex-col gap-4 md:gap-8 py-8 md:py-16"
+        className="w-full z-0 md:container mx-auto flex flex-col gap-4 md:gap-8 py-8 md:py-16"
       >
-        <div className="flex flex-col items-center text-white gap-4">
+        <div className="flex flex-col items-center text-white gap-4 ">
           <h2 className="text-center text-mh-gold text-2xl md:text-5xl  font-bold md:font-black">
             {formData.title}
           </h2>
@@ -17,7 +18,7 @@ const FormsSection = () => {
           </p>
         </div>
         <div className="container mx-auto">
-          <div className=" flex items-center justify-center ">
+          <div className=" flex items-center justify-center z-10">
             <MultiStepForm1 />
           </div>
         </div>

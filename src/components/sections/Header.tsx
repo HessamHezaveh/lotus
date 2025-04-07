@@ -50,7 +50,7 @@ const Header = () => {
 
   return (
     <div
-      className={`sticky z-50 flex items-center w-full justify-center px-8 px-16 h-fit  transition-all duration-300 ease-in-out top-0 max-md:bg-white ${
+      className={`sticky z-50 flex items-center w-full justify-center px-16 h-fit  transition-all duration-300 ease-in-out top-0 max-md:bg-white ${
         isScrolled ? "md:top-4  md:h-fit" : "bg-white md:top-0 md:h-[10vh]"
       }`}
     >
@@ -64,9 +64,9 @@ const Header = () => {
       <div
         className={`${
           isScrolled
-            ? "md:bg-mh-mainBlue text-white shadow-xl  w-[600px] "
+            ? "md:bg-gradient-to-b from-mh-lightBlue to-mh-mainBlue  text-white shadow-xl  w-[600px] "
             : "text-mh-darkBlue bg-wite w-full  "
-        } hidden md:flex items-center justify-center transition-all duration-300 ease-in-out py-3 px-6 rounded-full`}
+        } hidden md:flex items-center justify-center max-w-[1050px]  transition-all duration-300 ease-in-out py-3 px-6 rounded-full`}
       >
         <nav className="flex justify-between items-center gap-8 w-full ">
           <div className="  ">
