@@ -28,7 +28,7 @@ export const heroData = {
   title: "Web Sitemize Hoş Geldiniz",
   mainTitle:"Lotus company",
   description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, impedit ducimus laboriosam neque molestiae atque.",
-  buttonText: "Başlayın",
+  buttonText: "Bize Ulaşın",
   buttonHref: "/services",
   image: {
     src: "/images/hero-image.jpg",
@@ -281,7 +281,7 @@ export const footerData = {
 };
 
 export const formData ={
-  title:"Get Price",
-  description:"Get Price of our Services based on your needs",
+  title:"Hemen Fiyat Alın",
+  description:"Formu doldurun, projemiz hakkında size en kısa sürede ulaşalım!",
   header:"Enter your details"
 }

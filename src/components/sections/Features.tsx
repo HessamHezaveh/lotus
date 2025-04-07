@@ -11,7 +11,7 @@ const iconMapping: Record<string, React.ElementType> = {
 
 const Features = () => {
   return (
-    <div className="sm:-translate-y-[80%] lg:-translate-y-[80%] -mb-[20px] sm:-mb-[160px] md:-mb-[100px] mx-auto w-full container flex flex-col">
+    <div className="sm:-translate-y-[50%] md:-translate-y-[80%] -mb-[20px] sm:-mb-[160px] md:-mb-[100px] mx-auto w-full container flex flex-col z-[50]">
       <div className="flex flex-col sm:flex-row gap-4 md:gap-10 px-4 md:px-0">
         {featuresData.features.map((item) => {
           const IconComponent =

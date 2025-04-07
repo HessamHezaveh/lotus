@@ -22,19 +22,19 @@ import { Checkbox } from "@/components/ui/checkbox"; // Import the Checkbox comp
 
 // Form Schema
 const FormSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  name: z.string().min(2, { message: "sim en az 2 karakter olmalıdır." }),
   phone: z
     .string()
-    .min(10, { message: "Phone number must be at least 10 characters." }),
-  email: z.string().email({ message: "Please enter a valid email address." }),
+    .min(10, { message: "Telefon numarası en az 10 karakter olmalıdır." }),
+  email: z.string().email({ message: "Lütfen geçerli bir e-posta adresi girin." }),
   message: z.string(),
-  residenceName: z.string().min(2, "Residence name is required."),
-  numberOfBuilding: z.coerce.number().min(1, "Must be at least 1."),
-  numberOfApartments: z.coerce.number().min(1, "Must be at least 1."),
+  residenceName: z.string().min(2, "Site adı gereklidir."),
+  numberOfBuilding: z.coerce.number().min(1, "En az 1 olmalıdır."),
+  numberOfApartments: z.coerce.number().min(1, "En az 1 olmalıdır."),
   pool: z.boolean(), // Updated to boolean
   landscapeMaintenance: z.boolean(), // Updated to boolean
-  personnel: z.coerce.number().min(0, "Must be at least 0."),
-  address: z.string().min(5, "Address must be at least 5 characters."),
+  personnel: z.coerce.number().min(0, "En az 0 olmalıdır."),
+  address: z.string().min(5, "Adres en az 5 karakter olmalıdır."),
 });
 export type FormType = z.infer<typeof FormSchema>;
 
@@ -82,14 +82,14 @@ export function MultiStepForm1() {
       );
 
       if (response.status === 200) {
-        toast.success("Your message has been sent!");
+        toast.success("Mesajınız başarıyla gönderildi!");
       } else {
-        toast.error("Failed to send message.");
+        toast.error("Mesaj gönderilirken bir hata oluştu.");
       }
     } catch (error: any) {
       toast.error(
-        "Something went wrong: " +
-          (error?.text || error?.message || "Unknown error")
+        "Bir hata oluştu: " +
+          (error?.text || error?.message || "Tanımlanamayan hata")
       );
     } finally {
       setLoading(false);
@@ -145,9 +145,9 @@ export function MultiStepForm1() {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>İsim</FormLabel>
                   <FormControl>
-                    <Input placeholder="Name" {...field} />
+                    <Input placeholder="İsim" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -158,9 +158,9 @@ export function MultiStepForm1() {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Phone Number</FormLabel>
+                  <FormLabel>Telefon Numarası</FormLabel>
                   <FormControl>
-                    <Input placeholder="Phone Number" {...field} />
+                    <Input placeholder="Telefon Numarası" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -171,9 +171,9 @@ export function MultiStepForm1() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>E-posta</FormLabel>
                   <FormControl>
-                    <Input placeholder="Email" {...field} />
+                    <Input placeholder="E-posta" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -190,9 +190,9 @@ export function MultiStepForm1() {
               name="residenceName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Residence Name</FormLabel>
+                  <FormLabel>Site Adi</FormLabel>
                   <FormControl>
-                    <Input placeholder="Residence Name" {...field} />
+                    <Input placeholder="Site Adi" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -204,7 +204,7 @@ export function MultiStepForm1() {
                 name="numberOfBuilding"
                 render={({ field }) => (
                   <FormItem className="w-full">
-                    <FormLabel>Number of Buildings</FormLabel>
+                    <FormLabel>Blok Sayısı</FormLabel>
                     <FormControl>
                       <Input type="number" {...field} />
                     </FormControl>
@@ -217,7 +217,7 @@ export function MultiStepForm1() {
                 name="numberOfApartments"
                 render={({ field }) => (
                   <FormItem className="w-full">
-                    <FormLabel>Number of Apartments</FormLabel>
+                    <FormLabel>Dayore Sayısı</FormLabel>
                     <FormControl>
                       <Input type="number" {...field} />
                     </FormControl>
@@ -238,9 +238,9 @@ export function MultiStepForm1() {
                     />
                   </FormControl>
                   <div className="space-y-1 leading-none">
-                    <FormLabel>Pool</FormLabel>
+                    <FormLabel>Havuz</FormLabel>
                     <FormDescription className="text-zinc-200">
-                      Check if the residence has a pool.
+                    Havuz varsa işaretleyin.
                     </FormDescription>
                   </div>
                 </FormItem>
@@ -258,9 +258,9 @@ export function MultiStepForm1() {
                     />
                   </FormControl>
                   <div className="space-y-1 leading-none">
-                    <FormLabel>Landscape Maintenance</FormLabel>
+                    <FormLabel>Peyzaj Bakımı</FormLabel>
                     <FormDescription className="text-zinc-200">
-                      Check if the residence requires landscape maintenance.
+                      Rezidans için peyzaj bakımı gerekiyor mu? İşaretleyin.
                     </FormDescription>
                   </div>
                 </FormItem>
@@ -277,9 +277,9 @@ export function MultiStepForm1() {
               name="address"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Address</FormLabel>
+                  <FormLabel>Adres</FormLabel>
                   <FormControl>
-                    <Input placeholder="Address" {...field} />
+                    <Input placeholder="Adres" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -290,10 +290,10 @@ export function MultiStepForm1() {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Message</FormLabel>
+                  <FormLabel>Mesaj</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Type your message here."
+                      placeholder="Mesajınızı buraya yazın.."
                       {...field}
                     />
                   </FormControl>
@@ -308,12 +308,12 @@ export function MultiStepForm1() {
         <div className="flex justify-between">
           {step > 1 && (
             <Button variant="outline" onClick={handleBack}>
-              Back
+              Geri
             </Button>
           )}
           {step < 3 ? (
             <Button type="button" variant="outline" onClick={handleNext}>
-              Next
+              İleri
             </Button>
           ) : (
             <Button
@@ -323,10 +323,10 @@ export function MultiStepForm1() {
             >
               {loading ? (
                 <>
-                  <Loader2 className="animate-spin" /> Please wait
+                  <Loader2 className="animate-spin" /> Lütfen bekleyin
                 </>
               ) : (
-                "Submit"
+                "Gönder"
               )}
             </Button>
           )}
