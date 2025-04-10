@@ -16,7 +16,7 @@ const Home = () => {
         <Hero/>
       </div>
       <div className="md:-mb-32">
-        <Features />
+      <Features />
       </div>
       <div className="">
         <Services />

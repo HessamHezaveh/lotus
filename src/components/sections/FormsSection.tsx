@@ -4,7 +4,7 @@ import { MultiStepForm1 } from "../forms/MultiStepForm";
 const FormsSection = () => {
   return (
     <div className="relative bg-gradient-to-t from-mh-lightBlue to-mh-darkBlue">
-
+      
       <div
         id="price-form"
         className="w-full z-0 md:container mx-auto flex flex-col gap-4 md:gap-8 py-8 md:py-16"

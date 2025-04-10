@@ -3,16 +3,16 @@ import Link from "next/link";
 import React from "react";
 import {
   Facebook,
-  Twitter,
   Instagram,
   // MapIcon,
   PhoneIcon,
   MailIcon,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const iconMapping: Record<string, React.ElementType> = {
   FacebookIcon: Facebook,
-  TwitterIcon: Twitter,
+  WhatsappIcon: FaWhatsapp,
   InstagramIcon: Instagram,
 };
 const Footer = () => {
@@ -82,7 +82,7 @@ const Footer = () => {
                   key={item.id}
                   href={item.href}
                 >
-                  <IconComponent className=" group-hover:text-mh-gold duration-300 transition-all ease-in-out" />
+                  <IconComponent className=" group-hover:text-mh-gold duration-300 transition-all ease-in-out w-7 h-7" />
                   
                 </Link>
               );

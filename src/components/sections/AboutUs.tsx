@@ -2,6 +2,7 @@ import { aboutUsData } from "@/utils/data";
 import React from "react";
 import TitleCard from "../TitleCard";
 import Map from "./Map";
+import LogoTicker from "../LogoTicker";
 
 const AboutUs = () => {
   return (
@@ -9,6 +10,7 @@ const AboutUs = () => {
 
 
       <TitleCard title={aboutUsData.title} description={aboutUsData.description} fullText={aboutUsData.text} />
+      <LogoTicker />
       <Map  />
       
     </div>

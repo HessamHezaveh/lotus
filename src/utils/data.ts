@@ -26,9 +26,9 @@ export const headerTitleList = [
 
 export const heroData = {
   title: "Web Sitemize Hoş Geldiniz",
-  mainTitle:"Lotus company",
-  description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, impedit ducimus laboriosam neque molestiae atque.",
-  buttonText: "Bize Ulaşın",
+  mainTitle:"Lotus Yönetim&Danışmanlık",
+  description: "Sizin için Yönetelim",
+  buttonText: "Hemen Teklif Al!",
   buttonHref: "/services",
   image: {
     src: "/images/hero-image.jpg",
@@ -239,7 +239,7 @@ export const contactUsData = {
 };
 
 export const footerData = {
-  title: "Lotus company",
+  title: "Lotus Yonetim",
   description: "Lorem ipsum dolor sit amet.",
   
   image:{
@@ -248,12 +248,12 @@ export const footerData = {
   },
   contact:{
     title:"Contact us",
-    address: "İstasyon mahallesi hürriyet caddesi no:1/1 Kartepe Kocaeli",
+    address: "İstasyon Mahallesi Hürriyet Caddesi No:1/1 Kartepe Kocaeli",
   phone: "+905314937577",
-  email: "info@example.com",
+  email: "info@lotussiteyonetimi.com/",
   },
   socials: {
-    title:"Social media",
+    title:"Bizleri Takip Et",
     socialLinks:[
       {
         id: 1,
@@ -263,10 +263,11 @@ export const footerData = {
       },
       {
         id: 2,
-        name: "Twitter",
-        icon: "TwitterIcon",
-        href: "https://www.twitter.com",
+        name: "Whatsapp",
+        icon: "WhatsappIcon",
+        href: "https://www.Whatsapp.com",
       },
+
       {
         id: 3,
         name: "Instagram",
@@ -276,12 +277,83 @@ export const footerData = {
     ],
   },
   copyright:{
-    text: "Lotus company"
+    text: "Lotus "
   }
 };
 
 export const formData ={
   title:"Hemen Fiyat Alın",
-  description:"Formu doldurun, projemiz hakkında size en kısa sürede ulaşalım!",
+  description:"Formu doldurun, projeniz için size dönüş yapalım!",
   header:"Enter your details"
 }
+
+export const LogoImages = [
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"logo-1"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"logo-1"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"logo-1"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"logo-1"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"logo-1"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"logo-1"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"logo-1"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"logo-1"
+  },
+
+
+  // Second Sets of Logoes
+  {
+    logoSrc:"/logos/1.jpg",
+    alt:"logo-1"
+},
+{
+    logoSrc:"/logos/1.jpg",
+    alt:"logo-1"
+},
+{
+    logoSrc:"/logos/1.jpg",
+    alt:"logo-1"
+},
+{
+    logoSrc:"/logos/1.jpg",
+    alt:"logo-1"
+},
+{
+    logoSrc:"/logos/1.jpg",
+    alt:"logo-1"
+},
+{
+    logoSrc:"/logos/1.jpg",
+    alt:"logo-1"
+},
+{
+    logoSrc:"/logos/1.jpg",
+    alt:"logo-1"
+},
+{
+    logoSrc:"/logos/1.jpg",
+    alt:"logo-1"
+},
+
+]
