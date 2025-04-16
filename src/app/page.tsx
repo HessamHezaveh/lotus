@@ -5,6 +5,7 @@ import Features from "@/components/sections/Features";
 import Footer from "@/components/sections/Footer";
 import FormsSection from "@/components/sections/FormsSection";
 import Hero from "@/components/sections/Hero";
+import Numbers from "@/components/sections/Numbers";
 
 import Services from "@/components/sections/Services";
 import React from "react";
@@ -26,10 +27,13 @@ const Home = () => {
       </div>
       <div>
         <AboutUs />
+        
       </div>
+
       <div>
         <FAQ />
       </div>
+      
       <div>
         <Footer />
       </div>

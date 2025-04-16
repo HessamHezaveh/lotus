@@ -2,7 +2,7 @@
 import React from "react";
 import { Loader } from "@googlemaps/js-api-loader";
 import { mapData } from "@/utils/data";
-
+import { motion } from "framer-motion";
 const Map = () => {
   const mapRef = React.useRef<HTMLDivElement>(null);
 
@@ -69,7 +69,17 @@ const Map = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-start w-full">
+    <motion.div 
+    initial={{opacity:0, y:100}} 
+    whileInView={{opacity:1, y:0}}
+    viewport={{ once: true }}
+    transition={{
+        type:"spring",
+        stiffness:30,
+        damping:10,
+        delay:.8
+    }} 
+    className="flex flex-col items-center justify-start w-full">
       <div className="w-full sm:w-[70%]  h-[400px] sm:perspective-[300px] hover:perspective-[2000px] transition-all duration-1000">
         <div className="h-90 rotate-x-10">
           <div
@@ -79,7 +89,7 @@ const Map = () => {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

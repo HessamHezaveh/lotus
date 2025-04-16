@@ -1,3 +1,4 @@
+import { number } from "zod";
 
 
 
@@ -38,42 +39,42 @@ export const heroData = {
 
 export const servicesData = {
   title: "Hizmetler",
-  description: "Projenin kurulumundan yasal başvurulara, bütçe yönetiminden genel kurul süreçlerine kadar tüm detayları hızlı ve şeffaf bir şekilde yönetiyoruz. Apsiyon iş birliği sayesinde tüm süreçleri ve finansal hareketleri kolaylıkla takip edebilme imkânı sunuyoruz. Amacımız, kat sakinlerimize mutlu ve güvenli bir yaşam alanı sağlamaktır.",
+  description: "Bina yönetimi (apartman, site, toplu konut, iş merkezi) konusunda uzman ekibimizle, proje kurulumundan yasal başvurulara, bütçe yönetiminden genel kurul toplantılarına kadar tüm süreçleri güvenilir, hızlı ve şeffaf bir şekilde yönetiriz. Teknolojik altyapımız sayesinde aldığınız hizmeti ve finansal hareketleri kolaylıkla takip edebilme imkânı sunarız. Sizlere ve sevdiklerinize güvenilir ve huzurlu bir yaşam alanı oluşturma hedefiyle çalışırız.",
   services: [
     {
       id: 1,
       title: "Bahçe Bakımı",
-      description: "Peyzaj düzenlemesi ve düzenli çim bakımı ile yeşil alanlarınızı koruyoruz",
+      description: "Peyzaj düzenlemesi ve periyodik çim bakımı ile yeşil alanlarınızı koruruz.",
       icon: "SproutIcon",
     },
     {
       id: 2,
       title: "Bina Temizliği",
-      description: "Ortak alanlarınızı hijyenik ve tertemiz tutuyoruz",
+      description: "Rutin uygulamalarla ortak alanlarınızın temiz ve hijyenik kalmasını sağlarız.",
       icon: "TrashIcon",
     },
     {
       id: 3,
       title: "Tesis Yöneticiliği",
-      description: "Tesisinizin tüm operasyonlarını profesyonelce yönetiyoruz",
-      icon: "WrenchIcon", 
+      description: "Deneyimli ve profesyonel ekibimizle tesisinizin tüm operasyonlarını yönetiriz.",
+      icon:  "SettingsIcon",
     },
     {
       id: 4,
       title: "Teknik Servis",
-      description: "Elektrik, su ve diğer teknik sorunlarınıza hızlı çözüm sağlıyoruz",
-      icon: "SettingsIcon", 
+      description: "Alanında uzman ekiplerle elektrik, su ve diğer teknik sorunlarınıza hızlı çözüm sunarız.",
+      icon: "WrenchIcon",
     },
     {
       id: 5,
       title: "İlaçlama",
-      description: "Zararlılara karşı etkili ve güvenli çözümler sunuyoruz",
+      description: "Çevreye duyarlı yöntemlerle zararlılara karşı etkili ve güvenli çözümler geliştiririz.",
       icon: "BugOffIcon", 
     },
     {
       id: 6,
       title: "Havuz Bakımı",
-      description: "Havuzlarınızı sağlıklı ve temiz tutmak için düzenli bakım yapıyoruz",
+      description: "Düzenli bakım yaparak, havuzlarınızı hijyenik, sağlıklı ve temiz tutarız.",
       icon: "WavesIcon",
     },
   ],
@@ -81,9 +82,10 @@ export const servicesData = {
 
 export const aboutUsData = {
   title: "Hakkımızda",
-  description:
-    "Size en iyi hizmetleri sunan profesyonel bir ekibiz",
-  text: "10 yılı aşkın sektör deneyimimizle site ve tesis yönetimi alanındaki uzmanlığımızı, Lotus Yönetim ve Danışmanlık çatısı altında birleştirdik. Şeffaf, yenilikçi ve müşteri memnuniyeti odaklı hizmet anlayışımızla, bugün 1500’den fazla kat malikine hizmet vermekteyiz.",
+  // description:
+    // "Size en iyi hizmetleri sunan profesyonel bir ekibiz",
+  text1:"Sektörde 10 yılı aşkın deneyimimizi, bina (apartman, site, toplu konut, iş merkezi) yönetimi konusunda 360 derece hizmet veren Lotus Yönetim ve Danışmanlık çatısı altında birleştirdik. Güvenilir, şeffaf, yenilikçi ve müşteri memnuniyeti odaklı hizmet anlayışımızla, bugün 1500’den fazla konuta hizmet vermekteyiz.  ",
+  text2: "Sizlere ve sevdiklerinize güvenilir ve huzurlu bir yaşam alanı oluşturma hedefiyle çalışmaya devam ediyoruz.  ",
   image: {
     src: "/images/about-us.jpg",
     alt: "Hakkımızda Görseli",
@@ -105,6 +107,21 @@ export const mapData = [
   },
 
 ]
+export const countUpData = [
+  {
+    number: 15,
+    title: "Yıllık Tecrübe ",
+  },
+  {
+    number: 1500,
+    title: "Müşteri ",
+  },
+  {
+    number: 500,
+    title: "Bina – Konut  ",
+  },
+
+]
 
 
 export const featuresData = {
@@ -114,20 +131,20 @@ export const featuresData = {
     {
       id: 1,
       title: "Şeffaf Yönetim",
-      description: "Tüm süreçlerde açık ve net iletişim sağlıyoruz",
+      description: "Tüm süreçlerinizde açık ve net iletişim kurarız.",
       icon:"SearchCheckIcon"
     },
     {
       id: 2,
-      title: "Samimi Hizmet",
-      description: "Size gerçekten değer veren, güvenilir bir ekip",
+      title: "Kaliteli Hizmet ",
+      description: "Güvenilir ve işinin ehli ekiplerle kaliteli hizmet sunarız. ",
       icon:"HandshakeIcon"
 
     },
     {
       id: 3,
       title: "Hızlı Çözüm",
-      description: "Sorunlarınıza anında ve etkili müdahale",
+      description: "Sorunlarınıza anında ve etkili müdahale ederiz.",
       icon:"zapIcon"
 
     },

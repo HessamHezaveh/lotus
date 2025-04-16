@@ -7,7 +7,7 @@ import {
 import { faqData } from "@/utils/data";
 import React from "react";
 import TitleCard from "../TitleCard";
-
+import { motion } from "framer-motion";
 const FAQ = () => {
   return (
     <div className="container px-10 sm:px-5 mx-auto flex flex-col  items-center justify-center w-full">
@@ -15,12 +15,25 @@ const FAQ = () => {
       <TitleCard className="items-start w-full  gap-1 md:gap-1" title={faqData.title}  />
 
       <div className="flex flex-col  w-full  ">
-        {faqData.faqs.map((item) => {
-          return (
+        {faqData.faqs.map((item,i) => (
+            <motion.div
+            initial={{opacity:0, y:100}} 
+            whileInView={{opacity:1, y:0}}
+            viewport={{ once: true }}
+            transition={{
+                type:"spring",
+                stiffness:30,
+                damping:10,
+                delay:0.4+(i/7)
+            }}
+            key={i}
+            >
+              
+            
             <Accordion
               type="single"
               collapsible
-              key={item.id}
+              
               className="w-full  mx-auto  "
             >
               <AccordionItem  value={`item-${item.id}`}>
@@ -42,8 +55,8 @@ const FAQ = () => {
            
             </Accordion>
             
-          );
-        })}
+        </motion.div>
+        ))}
       </div>
     </div>
   );

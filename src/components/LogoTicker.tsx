@@ -6,7 +6,18 @@ import { LogoImages } from "@/utils/data"
 
 const LogoTicker = () => {
   return (
-    <div className="   -z-30 max-w-screen  flex flex-col gap-10 items-center justify-center ">
+    <motion.div
+    initial={{opacity:0}} 
+    whileInView={{opacity:1}}
+    viewport={{ once: true }}
+    transition={{
+        type:"spring",
+        stiffness:30,
+        damping:10,
+        delay:0.4
+    }} 
+    
+    className="   -z-30 max-w-screen  flex flex-col gap-10 items-center justify-center ">
         
         {/* <TitleCard title='MUTLU MÜŞTERİLER'  /> */}
         <div className="container  flex items-center">
@@ -27,7 +38,7 @@ const LogoTicker = () => {
                 }}
                 >
                 {LogoImages.map((logo, i)=>(
-                    <h2 className="text-3xl font-bold text-mh-mainBlue">Ornek isim</h2>
+                    <h2 className="text-3xl font-bold text-mh-mainBlue" key={i}>Ornek isim</h2>
                 // <img
                 //     key={i} 
                 //     src={logo.logoSrc} 
@@ -43,7 +54,7 @@ const LogoTicker = () => {
             </motion.div>
             </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
 
