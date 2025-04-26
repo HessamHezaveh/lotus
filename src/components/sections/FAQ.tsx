@@ -10,7 +10,7 @@ import TitleCard from "../TitleCard";
 import { motion } from "framer-motion";
 const FAQ = () => {
   return (
-    <div className="container px-10 sm:px-5 mx-auto flex flex-col  items-center justify-center w-full">
+    <div className="container px-10 sm:px-0 mx-auto flex flex-col  items-center justify-center w-full">
 
       <TitleCard className="items-start w-full  gap-1 md:gap-1" title={faqData.title}  />
 

@@ -87,7 +87,7 @@ export const aboutUsData = {
   text1:"Sektörde 10 yılı aşkın deneyimimizi, bina (apartman, site, toplu konut, iş merkezi) yönetimi konusunda 360 derece hizmet veren Lotus Yönetim ve Danışmanlık çatısı altında birleştirdik. Güvenilir, şeffaf, yenilikçi ve müşteri memnuniyeti odaklı hizmet anlayışımızla, bugün 1500’den fazla konuta hizmet vermekteyiz.  ",
   text2: "Sizlere ve sevdiklerinize güvenilir ve huzurlu bir yaşam alanı oluşturma hedefiyle çalışmaya devam ediyoruz.  ",
   image: {
-    src: "/images/about-us.jpg",
+    src: "",
     alt: "Hakkımızda Görseli",
   },
   

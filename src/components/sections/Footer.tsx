@@ -20,10 +20,10 @@ const Footer = () => {
   return (
     <div
       id="contact-us"
-      className="w-full h-full  md:h-[300px] bg-gradient-to-tr from-mh-mainBlue to-mh-lightBlue flex flex-col gap-4 "
+      className="w-full h-full  md:h-[400px] bg-gradient-to-tr from-mh-mainBlue to-mh-lightBlue flex flex-col gap-4 justify-center"
     >
 
-      <div className="container py-7 mx-auto flex md:flex-row flex-col items-center md:gap-16 gap-0 ">
+      <div className="container py-7 mx-auto flex md:flex-row flex-col items-center md:gap-6 gap-0 ">
         <motion.div
           initial={{opacity:0, x:-100}} 
           whileInView={{opacity:1, x:0}}
@@ -66,13 +66,7 @@ const Footer = () => {
 
 
           <div className="w-full flex flex-col items-center  gap-4">
-            <a
-              className="flex px-6 md:px-0 flex-col md:flex-row items-center w-full justify-start   gap-1 md:gap-8 group  text-center sm:text-start"
-              href="/"
-            >
-              {/* <MapIcon className=" group-hover:text-mh-gold duration-300 transition-all ease-in-out w-7 h-7" /> */}
-              {footerData.contact.address}
-            </a>
+
             <a
               className="flex flex-col md:flex-row items-center w-full justify-start  gap-1 md:gap-8 group"
               href={`tel:${footerData.contact.phone}`}
@@ -86,6 +80,13 @@ const Footer = () => {
             >
               <MailIcon className=" group-hover:text-mh-gold duration-300 transition-all ease-in-out w-8 h-7" />
               {footerData.contact.email}
+            </a>
+            <a
+              className="flex px-6 md:px-0 flex-col md:flex-row items-center w-full justify-start   gap-1 md:gap-8 group  text-center sm:text-start"
+              href="/"
+            >
+              {/* <MapIcon className=" group-hover:text-mh-gold duration-300 transition-all ease-in-out w-7 h-7" /> */}
+              {footerData.contact.address}
             </a>
           </div>
         </motion.div>
@@ -124,18 +125,7 @@ const Footer = () => {
         </motion.div>
         </div>
       </div>
-      <div className="flex bg-mh-mainBlue justify-center items-center text-white py-3">
-        <p className="text-sm">
-          © {new Date().getFullYear()}{" "}
-          <a
-            className="hover:text-mh-gold transition-all duration-300 ease-in-out"
-            href="/"
-          >
-            {footerData.copyright.text}
-          </a>
-          . All rights reserved.
-        </p>
-      </div>
+      
     </div>
   );
 };

@@ -1,5 +1,7 @@
 "use client"
-import AboutUs from "@/components/sections/AboutUs";
+import WeAre from "@/components/sections/WeAre";
+import AboutUs2 from "@/components/sections/AboutUs2";
+import CopyRight from "@/components/sections/CopyRight";
 import FAQ from "@/components/sections/FAQ";
 import Features from "@/components/sections/Features";
 import Footer from "@/components/sections/Footer";
@@ -9,6 +11,7 @@ import Numbers from "@/components/sections/Numbers";
 
 import Services from "@/components/sections/Services";
 import React from "react";
+import Poster from "@/components/sections/Poster";
 
 const Home = () => {
   return (
@@ -26,17 +29,26 @@ const Home = () => {
         <FormsSection />
       </div>
       <div>
-        <AboutUs />
+        <WeAre />
         
+      </div>
+      <div>
+        <Poster/>
       </div>
 
       <div>
         <FAQ />
       </div>
+
+      <div>
+      <AboutUs2/>
+      </div>
       
       <div>
         <Footer />
+        <CopyRight/>
       </div>
+
     </div>
   );
 };

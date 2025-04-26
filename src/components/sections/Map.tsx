@@ -53,8 +53,8 @@ const Map = () => {
         const icon = document.createElement("div");
         icon.style.backgroundImage = "url(/my-logo.png)"; // Path to your logo
         icon.style.backgroundSize = "cover";
-        icon.style.width = "70px"; // Set the width of the icon
-        icon.style.height = "70px"; // Set the height of the icon
+        icon.style.width = "30px"; // Set the width of the icon
+        icon.style.height = "30px"; // Set the height of the icon
 
         // Create an AdvancedMarkerElement for each position
         new AdvancedMarkerElement({
@@ -80,7 +80,7 @@ const Map = () => {
         delay:.8
     }} 
     className="flex flex-col items-center justify-start w-full">
-      <div className="w-full sm:w-[70%]  h-[400px] sm:perspective-[300px] hover:perspective-[2000px] transition-all duration-1000">
+      <div className=" w-[90%] lg:w-[100%] h-[400px] sm:perspective-[300px] hover:perspective-[2000px] transition-all duration-1000">
         <div className="h-90 rotate-x-10">
           <div
             className="w-full h-full rounded-2xl shadow-lg"

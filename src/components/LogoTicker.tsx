@@ -17,7 +17,7 @@ const LogoTicker = () => {
         delay:0.4
     }} 
     
-    className="   -z-30 max-w-screen  flex flex-col gap-10 items-center justify-center ">
+    className=" -z-30 max-w-screen  flex flex-col gap-10 items-center justify-center ">
         
         {/* <TitleCard title='MUTLU MÜŞTERİLER'  /> */}
         <div className="container  flex items-center">
@@ -38,7 +38,7 @@ const LogoTicker = () => {
                 }}
                 >
                 {LogoImages.map((logo, i)=>(
-                    <h2 className="text-3xl font-bold text-mh-mainBlue" key={i}>Ornek isim</h2>
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-mh-mainBlue" key={i}>Ornek isim</h2>
                 // <img
                 //     key={i} 
                 //     src={logo.logoSrc} 

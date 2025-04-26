@@ -8,11 +8,11 @@ const Numbers = () => {
         threshold :0.5,
     })
   return (
-    <div ref={ref} className='flex pt-10 w-full mx-auto  items-center justify-between sm:justify-between md:justify-between container '>
+    <div ref={ref} className='flex  w-full mx-auto  items-center justify-around  container '>
         {countUpData.map((item, index) => (
             
     <div key={index} className='relative flex items-center justify-center'>
-    <div className='text-5xl sm:text-6xl md:text-7xl text-mh-gold opacity-30 hover:opacity-50 transition-all duration-300 ease-in-out -z-1 mb-2 font-bold text-center absolute'>
+    <div className='text-4xl sm:text-5xl md:text-6xl text-mh-gold opacity-40 hover:opacity-50 transition-all duration-300 ease-in-out -z-1 mb-2 font-bold text-center absolute'>
         {inView ? 
         <CountUp 
             start={0} 
@@ -23,7 +23,7 @@ const Numbers = () => {
         +
     </div>
     <div>
-        <h3 className='font-semibold text-center text-sm sm:text-lg md:text-2xl text-zinc-400 z-100 '>
+        <h3 className='font-semibold text-center text-sm sm:text-lg md:text-xl  opacity-50 z-100 '>
             {item.title}
         </h3>
     </div>
