@@ -54,17 +54,11 @@ const Header = () => {
         isScrolled ? "md:top-4  md:h-fit" : "bg-white md:top-0 md:h-[10vh]"
       }`}
     >
-      {/* LOGO */}
-
-      {/* <div className="text-mh-darkBlue col-span-1 md:text-4xl justify-self-start ">
-        <img src="/logo 3.png" alt="logo" className="w-16 h-16 p-1" />
-      </div> */}
-
       {/* Desktop Menu */}
       <div
         className={`${
           isScrolled
-            ? "md:bg-gradient-to-b from-mh-lightBlue to-mh-mainBlue  text-white shadow-xl  w-[600px] "
+            ? "md:bg-gradient-to-b from-mh-lightBlue to-mh-mainBlue  text-white shadow-xl  w-[900px] "
             : "text-mh-darkBlue bg-wite w-full  "
         } hidden md:flex items-center justify-center max-w-[1050px]  transition-all duration-300 ease-in-out py-3 px-6 rounded-full`}
       >
@@ -83,7 +77,7 @@ const Header = () => {
                 key={item.id}
                 href={item.href}
                 onClick={(e) => handleSmoothScroll(e, item.href)}
-                className="hover:text-mh-gold text-lg font-medium transition-all duration-300 ease-in-out cursor-pointer"
+                className="hover:text-mh-gold text-[14px] lg:text-lg font-small transition-all duration-300 ease-in-out cursor-pointer"
               >
                 {item.name}
               </a>

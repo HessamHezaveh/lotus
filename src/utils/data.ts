@@ -1,6 +1,3 @@
-import { number } from "zod";
-
-
 
 export const headerTitleList = [
   {
@@ -8,18 +5,30 @@ export const headerTitleList = [
     name: "Ana Sayfa",
     href: "/",
   },
+
   {
     id: 2,
-    name: "Fiyat",
-    href: "#price-form",
+    name: "Hizmetler",
+    href: "#services",
   },
   {
     id: 3,
+    name: "Fiyat",
+    href: "#price-form",
+  },
+
+  {
+    id: 4,
+    name: "Referanslar",
+    href: "#weare",
+  },
+  {
+    id: 5,
     name: "Hakkımızda",
     href: "#about-us",
   },
   {
-    id: 4,
+    id: 6,
     name: "İletişim",
     href: "#contact-us",
   },
@@ -28,7 +37,7 @@ export const headerTitleList = [
 export const heroData = {
   title: "Web Sitemize Hoş Geldiniz",
   mainTitle:"Lotus Yönetim&Danışmanlık",
-  description: "Sizin için Yönetelim",
+  description: "Her Yapıya Değer Katan Çözümler!",
   buttonText: "Hemen Teklif Al!",
   buttonHref: "/services",
   image: {
@@ -43,22 +52,23 @@ export const servicesData = {
   services: [
     {
       id: 1,
+      title: "Tesis Yöneticiliği",
+      description: "Deneyimli ve profesyonel ekibimizle tesisinizin tüm operasyonlarını yönetiriz.",
+      icon:  "SettingsIcon",
+    },
+    {
+      id: 2,
       title: "Bahçe Bakımı",
       description: "Peyzaj düzenlemesi ve periyodik çim bakımı ile yeşil alanlarınızı koruruz.",
       icon: "SproutIcon",
     },
     {
-      id: 2,
+      id: 3,
       title: "Bina Temizliği",
       description: "Rutin uygulamalarla ortak alanlarınızın temiz ve hijyenik kalmasını sağlarız.",
       icon: "TrashIcon",
     },
-    {
-      id: 3,
-      title: "Tesis Yöneticiliği",
-      description: "Deneyimli ve profesyonel ekibimizle tesisinizin tüm operasyonlarını yönetiriz.",
-      icon:  "SettingsIcon",
-    },
+
     {
       id: 4,
       title: "Teknik Servis",
@@ -94,19 +104,46 @@ export const aboutUsData = {
 };
 export const mapData = [
   {
-    lat: 40.362572398982364, 
-    lng: 30.667863815035918,
+    
+    lat: 40.735412071021216, 
+    lng: 30.031173135929162,
+  },
+// , 
+  {
+    lat: 40.73269506326539, 
+    lng: 30.030617073015044,
   },
   {
-    lat: 40.762572398982364, 
-    lng: 30.367863815035918,
+    lat: 40.73362464366652, 
+    lng: 30.018969603701763,
   },
   {
-    lat: 40.762572398982364, 
-    lng: 30.967863815035918,
+    lat: 40.74370580717992, 
+    lng: 30.04409460370176,
+  },
+  {
+    lat: 40.7300019818177, 
+    lng: 30.034859173015047,
+  },
+  {
+    lat: 40.74063142756918, 
+    lng: 30.04324677116415,
+  },
+  {
+    lat: 40.74063142756918, 
+    lng: 30.043203855820796,
+  },
+  {
+    lat: 40.75446011780488, 
+    lng: 30.05467228650752,
+  },
+  {
+    lat: 40.754604653878836, 
+    lng: 30.020674215343355,
   },
 
 ]
+
 export const countUpData = [
   {
     number: 15,
@@ -116,8 +153,9 @@ export const countUpData = [
     number: 1500,
     title: "Müşteri ",
   },
+  
   {
-    number: 500,
+    number: 113,
     title: "Bina – Konut  ",
   },
 
@@ -137,7 +175,7 @@ export const featuresData = {
     {
       id: 2,
       title: "Kaliteli Hizmet ",
-      description: "Güvenilir ve işinin ehli ekiplerle kaliteli hizmet sunarız. ",
+      description: "Güvenilir ve uzman ekibimizle, kaliteli hizmet sunmaktayız. ",
       icon:"HandshakeIcon"
 
     },
@@ -247,7 +285,7 @@ export const faqData = {
 };
 
 export const contactUsData = {
-  title: "Contact Us",
+  title: "İletişim ",
   description: "Contact Us Description",
   image: {
     src: "/images/contact-us.jpg",
@@ -256,21 +294,21 @@ export const contactUsData = {
 };
 
 export const footerData = {
-  title: "Lotus Yonetim",
-  description: "Lorem ipsum dolor sit amet.",
+  title: "Lotus Yönetim&Danışmanlık",
+  description: "Sizin için Yönetelim",
   
   image:{
     src:"/logo 3.png",
     alt:"logo"
   },
   contact:{
-    title:"Contact us",
+    title:"İletişim ",
     address: "İstasyon Mahallesi Hürriyet Caddesi No:1/1 Kartepe Kocaeli",
   phone: "+905314937577",
   email: "info@lotussiteyonetimi.com/",
   },
   socials: {
-    title:"Bizleri Takip Et",
+    title:"Bizi Takip Edin!",
     socialLinks:[
       {
         id: 1,
@@ -282,14 +320,14 @@ export const footerData = {
         id: 2,
         name: "Whatsapp",
         icon: "WhatsappIcon",
-        href: "https://www.Whatsapp.com",
+        href: "https://wa.me/905362957219",
       },
 
       {
         id: 3,
         name: "Instagram",
         icon: "InstagramIcon",
-        href: "https://www.instagram.com",
+        href: "https://www.instagram.com/lotussiteyonetimi?igsh=MXFmeDczd29vdnJpcw==",
       },
     ],
   },
@@ -298,7 +336,7 @@ export const footerData = {
   }
 };
 
-export const formData ={
+export const formData = {
   title:"Hemen Fiyat Alın",
   description:"Formu doldurun, projeniz için size dönüş yapalım!",
   header:"Enter your details"
@@ -307,70 +345,197 @@ export const formData ={
 export const LogoImages = [
   {
       logoSrc:"/logos/1.jpg",
-      alt:"logo-1"
+      alt:"Demirada Tower"
   },
   {
       logoSrc:"/logos/1.jpg",
-      alt:"logo-1"
+      alt:"Demirada Diamond I"
   },
   {
       logoSrc:"/logos/1.jpg",
-      alt:"logo-1"
+      alt:"Demirada Diamond II"
   },
   {
       logoSrc:"/logos/1.jpg",
-      alt:"logo-1"
+      alt:"Demirada Diamond V"
   },
   {
       logoSrc:"/logos/1.jpg",
-      alt:"logo-1"
+      alt:"Demirada Diamond VI"
   },
   {
       logoSrc:"/logos/1.jpg",
-      alt:"logo-1"
+      alt:"Terna Yapı Prestij Villaları "
   },
   {
       logoSrc:"/logos/1.jpg",
-      alt:"logo-1"
+      alt:"Terna Yapı Empire House"
   },
   {
       logoSrc:"/logos/1.jpg",
-      alt:"logo-1"
+      alt:"Hürsoy Atakent 2"
   },
-
-
-  // Second Sets of Logoes
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Exen 1 Sitesi"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"MRŞ İnşaat "
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Hill Garden Villaları"
+  },
   {
     logoSrc:"/logos/1.jpg",
-    alt:"logo-1"
+    alt:"Basra İnşaat "
 },
-{
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Tuana Evleri 2"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Mia Garden Sitesi "
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Meltem Sitesi "
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Gülaş Sitesi "
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Adaşehir Sitesi "
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Damla 5 Sitesi "
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Demirada Gayrimenkul"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Kent Meydanı İş Merkezi"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Elyapı İş Merkezi"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Taş Mahal İş Merkezi "
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Güçkat Plaza "
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Sukra Park "
+  },
+  ///////////////////////////////
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Demirada Tower"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Demirada Diamond I"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Demirada Diamond II"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Demirada Diamond V"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Demirada Diamond VI"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Terna Yapı Prestij Villaları "
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Terna Yapı Empire House"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Hürsoy Atakent 2"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Exen 1 Sitesi"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"MRŞ İnşaat "
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Hill Garden Villaları"
+  },
+  {
     logoSrc:"/logos/1.jpg",
-    alt:"logo-1"
+    alt:"Basra İnşaat "
 },
-{
-    logoSrc:"/logos/1.jpg",
-    alt:"logo-1"
-},
-{
-    logoSrc:"/logos/1.jpg",
-    alt:"logo-1"
-},
-{
-    logoSrc:"/logos/1.jpg",
-    alt:"logo-1"
-},
-{
-    logoSrc:"/logos/1.jpg",
-    alt:"logo-1"
-},
-{
-    logoSrc:"/logos/1.jpg",
-    alt:"logo-1"
-},
-{
-    logoSrc:"/logos/1.jpg",
-    alt:"logo-1"
-},
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Tuana Evleri 2"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Mia Garden Sitesi "
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Meltem Sitesi "
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Gülaş Sitesi "
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Adaşehir Sitesi "
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Damla 5 Sitesi "
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Demirada Gayrimenkul"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Kent Meydanı İş Merkezi"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Elyapı İş Merkezi"
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Taş Mahal İş Merkezi "
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Güçkat Plaza "
+  },
+  {
+      logoSrc:"/logos/1.jpg",
+      alt:"Sukra Park "
+  },
+  ///////////////////////////////
 
 ]

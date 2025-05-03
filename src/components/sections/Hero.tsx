@@ -3,20 +3,20 @@ import { heroData } from "@/utils/data";
 import { MoveRightIcon } from "lucide-react";
 import React from "react";
 import {motion} from 'framer-motion'
-import Numbers from "./Numbers";
+
 
 const Hero = () => {
   return (
     <div className="flex flex-col gap-4  relative md:items-start items-center justify-center  h-[600px] md:h-[700px]">
 
-      {/* <video src="/6.webm" autoPlay loop muted 
-      className="w-full h-full object-cover absolute top-0 left-0 -z-10 filter saturate-[0.5] brightness-[1.1]"></video> */}
+      <video src="/ternanew.mp4" autoPlay loop muted 
+      className="w-full h-full object-cover absolute top-0 left-0 -z-10 filter saturate-[0.5] brightness-[1.1]"></video>
             {/* Gradient Mask */}
-      {/* <div className="absolute inset-0 bg-gradient-to-r from-mh-mainBlue to-mh-mainBlue/30 -z-5"></div> */}
-      <div className="absolute inset-0 bg-gradient-to-t from-mh-darkBlue to-mh-lightBlue -z-5"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-mh-mainBlue to-mh-mainBlue/30 -z-5"></div>
+      
+      {/* <div className="absolute inset-0 bg-gradient-to-t from-mh-darkBlue to-mh-lightBlue -z-5"></div> */}
 
       <div className=" container mx-auto px-4 md:px-0 flex flex-col gap-8  h-full justify-center">
-
         <motion.div 
           initial={{opacity:0, y:-100}} 
           animate={{opacity:1, y:0}} 
@@ -30,12 +30,12 @@ const Hero = () => {
           {/* <p className="text-white text-center md:text-xl text-sm sm:text-lg md:font-extrabold font-bold">{heroData.title}</p> */}
           <h1 className=" text-4xl  md:text-6xl text-center font-extrabold text-mh-gold">
             {/* {heroData.mainTitle} */}
-            <span>LOTUS</span> 
+            <span>Lotus</span> 
             
             <span className=""> Yönetim & Danışmanlık </span>
           </h1>
           <p className="text-white text-center XXXmd:text-start text-lg sm:text-2xl font-light max-w-xl">
-            {heroData.description}
+          <q>{heroData.description}</q>
           </p>
         </motion.div>
 

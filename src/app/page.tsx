@@ -7,11 +7,10 @@ import Features from "@/components/sections/Features";
 import Footer from "@/components/sections/Footer";
 import FormsSection from "@/components/sections/FormsSection";
 import Hero from "@/components/sections/Hero";
-import Numbers from "@/components/sections/Numbers";
-
 import Services from "@/components/sections/Services";
 import React from "react";
 import Poster from "@/components/sections/Poster";
+import {motion} from "framer-motion"
 
 const Home = () => {
   return (
@@ -32,9 +31,20 @@ const Home = () => {
         <WeAre />
         
       </div>
-      <div>
+      <motion.div
+      
+          initial={{opacity:0, y:100}} 
+          whileInView={{opacity:1, y:0}}
+          viewport={{ once: true }}
+          transition={{
+              type:"spring",
+              stiffness:30,
+              damping:10,
+              delay:0.4
+          }}
+      >
         <Poster/>
-      </div>
+      </motion.div>
 
       <div>
         <FAQ />

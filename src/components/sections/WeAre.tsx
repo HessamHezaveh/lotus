@@ -1,19 +1,20 @@
-import { aboutUsData } from "@/utils/data";
+
 import React from "react";
 import TitleCard from "../TitleCard";
 import Map from "./Map";
 import LogoTicker from "../LogoTicker";
 import Numbers from "./Numbers";
-import Image from "next/image";
+
 
 
 const WeAre = () => {
   return (
-    <div id="about-us" className="w-full container mx-auto flex flex-col gap-4 px-10">
-                <TitleCard 
-          title={aboutUsData.title} 
+    <div id="weare" className="w-full container mx-auto flex flex-col gap-4 px-5">
+        <TitleCard 
+          title="Referanslarımızdan Bazıları"
+          
           // description={aboutUsData.description} 
-          fullText='hjdbjjksjd kjsd '
+          // fullText='Mutlu Projelerimiz '
  
           className="justify-center items-center"
           textClassName="text-center"
@@ -23,8 +24,12 @@ const WeAre = () => {
       <div className=" ">
         <LogoTicker />
       </div>
-      <Map  />
-      <div className="pt-20 pb-5 ">
+      <div>
+      <div className="max-w-screen px-0 sm:px-10">
+        <Map/>
+      </div>
+      </div>
+      <div className="pt-10 md:pt-20 pb-5 ">
           <Numbers/>
       </div>
       

@@ -31,14 +31,16 @@ const LogoTicker = () => {
                     translateX: "-50%"
                 }}
                 transition={{
-                    duration: 30,
+                    duration: 60,
                     repeat: Infinity,
                     repeatType: "loop",
                     ease: "linear",
                 }}
                 >
                 {LogoImages.map((logo, i)=>(
-                    <h2 className="text-3xl sm:text-4xl font-extrabold text-mh-mainBlue" key={i}>Ornek isim</h2>
+                    <h2 className="text-2xl sm:text-3xl pb-6 font-extrabold text-mh-mainBlue" key={i}>
+                    {logo.alt}
+                    </h2>
                 // <img
                 //     key={i} 
                 //     src={logo.logoSrc} 

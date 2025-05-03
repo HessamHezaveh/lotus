@@ -5,7 +5,7 @@ import TitleCard from '../TitleCard'
 
 const AboutUs2 = () => {
   return (
-    <div className="container mx-auto px-10 sm:px-0 flex lg:flex-row  flex-col-reverse gap-3 pt-4 sm:gap-8  ">
+    <div id='about-us' className="container mx-auto px-10 sm:px-0 flex lg:flex-row  flex-col-reverse gap-3 pt-4 sm:gap-8  ">
         <div className="flex-1">
           <TitleCard 
           title={aboutUsData.title} 

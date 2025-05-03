@@ -88,7 +88,7 @@ const TitleCard: React.FC<TitleCardProps> = ({
             damping:10,
             delay:.4
         }}
-          className={`text-center text-base sm:text-lg md:-mt-[15px] mt-0 font-normal text-zinc-800 ${textClassName}`}
+          className={`text-center text-base sm:text-lg md:-mt-[15px] mt-0 font-normal  text-zinc-800 ${textClassName}`}
         >
           {fullText2}
         </motion.p>

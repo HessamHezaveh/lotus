@@ -22,7 +22,7 @@ const Map = () => {
       const defaultCenter = mapData[0];
       const mapOptions: google.maps.MapOptions = {
         center: defaultCenter,
-        zoom: 8, // Adjusted zoom level to fit multiple markers
+        zoom: 13, // Adjusted zoom level to fit multiple markers
         mapId: "dbbf6615a1df8de8",
         disableDefaultUI: true,
         styles: [

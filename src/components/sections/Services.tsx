@@ -16,8 +16,8 @@ const iconMapping: Record<string, React.ElementType> = {
 const Services = () => {
 
   return (
-    <div className="w-full container mx-auto flex flex-col gap-8  py-10">
-
+    <div id="services" className="w-full container mx-auto flex flex-col gap-8  py-10">
+      
       <TitleCard title={servicesData.title} fullText={servicesData.description} />
 
 

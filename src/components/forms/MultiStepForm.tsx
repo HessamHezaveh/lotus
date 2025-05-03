@@ -33,7 +33,7 @@ const FormSchema = z.object({
   numberOfApartments: z.coerce.number().min(1, "En az 1 olmalıdır."),
   pool: z.boolean(), // Updated to boolean
   landscapeMaintenance: z.boolean(), // Updated to boolean
-  personnel: z.coerce.number().min(0, "En az 0 olmalıdır."),
+  personnel: z.boolean(),
   address: z.string().min(5, "Adres en az 5 karakter olmalıdır."),
 });
 export type FormType = z.infer<typeof FormSchema>;
@@ -53,7 +53,7 @@ export function MultiStepForm1() {
       numberOfApartments: 1,
       pool: false, // Default to unchecked
       landscapeMaintenance: false, // Default to unchecked
-      personnel: 0,
+      personnel: false,
       address: "",
     },
   });
@@ -63,8 +63,8 @@ export function MultiStepForm1() {
     setLoading(true);
     try {
       const response = await emailjs.send(
-        "service_tv9gn7l",
-        "template_mt4j9jx",
+        "service_1hlr54d",
+        "template_pcmca2n",
         {
           name: data.name,
           phone: data.phone,
@@ -78,7 +78,7 @@ export function MultiStepForm1() {
           personnel: data.personnel,
           address: data.address,
         },
-        "010DgmtOU0U783PiF"
+        "AQNVZMaEpWDR4VhZ2"
       );
 
       if (response.status === 200) {
@@ -217,7 +217,7 @@ export function MultiStepForm1() {
                 name="numberOfApartments"
                 render={({ field }) => (
                   <FormItem className="w-full">
-                    <FormLabel>Dayore Sayısı</FormLabel>
+                    <FormLabel>Daire Sayısı</FormLabel>
                     <FormControl>
                       <Input type="number" {...field} />
                     </FormControl>
@@ -226,6 +226,7 @@ export function MultiStepForm1() {
                 )}
               />
             </div>
+
             <FormField
               control={form.control}
               name="pool"
@@ -246,6 +247,7 @@ export function MultiStepForm1() {
                 </FormItem>
               )}
             />
+
             <FormField
               control={form.control}
               name="landscapeMaintenance"
@@ -266,6 +268,29 @@ export function MultiStepForm1() {
                 </FormItem>
               )}
             />
+
+            <FormField
+              control={form.control}
+              name="personnel"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value} // Bind the checkbox state to the form value
+                      onCheckedChange={(checked) => field.onChange(!!checked)} // Update the form state
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel>persenel</FormLabel>
+                    <FormDescription className="text-zinc-200">
+                      Daimi personal var mı?
+                    </FormDescription>
+                  </div>
+                </FormItem>
+              )}
+            />
+
+
           </>
         )}
 

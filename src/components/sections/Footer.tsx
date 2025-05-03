@@ -20,10 +20,10 @@ const Footer = () => {
   return (
     <div
       id="contact-us"
-      className="w-full h-full  md:h-[400px] bg-gradient-to-tr from-mh-mainBlue to-mh-lightBlue flex flex-col gap-4 justify-center"
+      className="w-full h-[800px] sm:h-[700px] lg:h-[400px]  bg-gradient-to-tr from-mh-mainBlue to-mh-lightBlue flex flex-col gap-4 justify-center px-10" 
     >
 
-      <div className="container py-7 mx-auto flex md:flex-row flex-col items-center md:gap-6 gap-0 ">
+      <div className="container py-7 mx-auto flex lg:flex-row flex-col items-center lg:gap-24 gap-6 ">
         <motion.div
           initial={{opacity:0, x:-100}} 
           whileInView={{opacity:1, x:0}}
@@ -34,7 +34,7 @@ const Footer = () => {
               damping:10,
               delay:0.4
           }} 
-        className="flex flex-1 flex-col items-center justify-center">
+        className="flex flex-1 flex-col items-center justify-center pt-[70px] lg:pt-0">
           <img
             className="invert w-24"
             src={footerData.image.src}
@@ -43,12 +43,18 @@ const Footer = () => {
           <h2 className="text-center text-mh-gold text-xl md:text-3xl font-bold md:font-black">
             {footerData.title}
           </h2>
-          <p className="text-white font-light py-6 text-xs">
+          {/* <p className="text-white font-light py-6 text-xs">
             {footerData.description}
-          </p>
+          </p> */}
+          <div className=" flex gap-2 justify-center items-center pt-5 ">
+
+          <img src="/apsiyon.svg" alt="" className='h-[20px] md:h-[20px] '/>
+          <span className="text-white pb-[1px] "> Üyesi </span>
+          </div>
         </motion.div>
         
-        <div className="flex flex-2 flex-col items-start justify-center md:flex-row">
+        {/* 2 part ------------------------------------------------------------------------------- */}
+        <div className="flex flex-2 flex-col items-start justify-start  md:flex-row">
         <motion.div 
             initial={{opacity:0, y:100}} 
             whileInView={{opacity:1, y:0}}
@@ -121,7 +127,9 @@ const Footer = () => {
                 </Link>
               );
             })}
+            
           </div>
+
         </motion.div>
         </div>
       </div>
